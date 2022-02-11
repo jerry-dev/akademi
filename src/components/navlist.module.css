@@ -1,0 +1,13 @@
+.navlist {
+    list-style: none;
+    margin-left: auto;
+    max-width: 18.6875rem;
+}
+
+.navlist li {
+    height: 4.5rem;
+}
+
+.navlist li:not(:last-child) {
+    margin-bottom: 0.5rem;    
+}

@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './navlist.module.css';
 import NavElement from './NavElement.js';
 
 const NavList = () => {
     return (
-        <ul>
+        <ul className={styles.navlist}>
             <li>
                 <NavElement
                     link="x"
