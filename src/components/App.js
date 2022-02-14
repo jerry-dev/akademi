@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from './Sidebar.js';
-import HomeView from './HomeView.js';
+import HomeView from './homeview/HomeView.js';
 
 const App = () => {
     return (
