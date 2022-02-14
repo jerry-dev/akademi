@@ -5,7 +5,7 @@ import logo from '../assets/icons/shared/logo.svg';
 const CompanyLogo = () => {
     return (
         <div className={styles.companyLogo}>
-            <img src={logo}/>
+            <img src={logo} alt="Company logo"/>
             <h3>Akademi</h3>
         </div>
     );
