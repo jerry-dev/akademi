@@ -1,11 +1,12 @@
 import React from 'react';
 import NavList from './NavList.js';
+import CompanyLogo from './CompanyLogo.js';
 import styles from './sidebar.module.css';
 
 const Sidebar = () => {
     return (
         <aside className={styles.aside}>
-            {/* <CompanyLogo/> */}
+            <CompanyLogo/>
             <NavList/>
         </aside>
     )
