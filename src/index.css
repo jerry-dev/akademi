@@ -43,5 +43,11 @@ body {
 }
 
 #root {
+    display: flex;
     max-width: 120rem;
+}
+
+main {
+    background-color: var(--color-7);
+    width: 100%;
 }

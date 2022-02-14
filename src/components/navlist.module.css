@@ -1,7 +1,7 @@
 .navlist {
     list-style: none;
     margin-left: auto;
-    max-width: 18.6875rem;
+    width: 18.6875rem;
 }
 
 .navlist li {
