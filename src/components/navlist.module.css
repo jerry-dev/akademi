@@ -5,7 +5,12 @@
 }
 
 .navlist li {
+    align-items: center;
+    display: flex;
     height: 4.5rem;
+    justify-content: center;
+
+    /* OUTLINE: 1PX SOLID GOLD; */
 }
 
 .navlist li:not(:last-child) {

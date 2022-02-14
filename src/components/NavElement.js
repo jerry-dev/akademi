@@ -1,10 +1,13 @@
 import React from 'react';
+import styles from './navelement.module.css';
 
 const NavElement = (props) => {
     return (
-        <a href={props.link}>
-            <img href={props.icon}/>
-            {props.text}
+        <a className={styles.navElement} href={props.link}>
+            <span>
+                <img href={props.icon}/>
+                {props.text}
+            </span>
         </a>
     )
 }
