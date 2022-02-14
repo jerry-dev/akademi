@@ -5,7 +5,7 @@ const NavElement = (props) => {
     return (
         <a className={styles.navElement} href={props.link}>
             <span>
-                <img href={props.icon}/>
+                <img src={props.icon}/>
                 {props.text}
             </span>
         </a>
