@@ -1,5 +1,13 @@
 import React from 'react';
 import styles from './navlist.module.css';
+import Home from '../assets/icons/shared/Home.svg';
+import Student from '../assets/icons/shared/Student.svg';
+import Calendar from '../assets/icons/shared/Calendar.svg';
+import Finance from '../assets/icons/shared/Finance.svg';
+import Food from '../assets/icons/shared/Food.svg';
+import User from '../assets/icons/shared/User.svg';
+import Chat from '../assets/icons/shared/Chat.svg';
+import Activity from '../assets/icons/shared/Activity.svg';
 import NavElement from './NavElement.js';
 
 const NavList = () => {
@@ -9,55 +17,55 @@ const NavList = () => {
                 <li>
                     <NavElement
                         link="x"
-                        icon="y"
+                        icon={Home}
                         text="Dashboard"/>
                 </li>
                 <li>
                     <NavElement
                         link="x"
-                        icon="y"
+                        icon={Student}
                         text="Students"/>
                 </li>
                 <li>
                     <NavElement
                         link="x"
-                        icon="y"
+                        icon={Student}
                         text="Teachers"/>
                 </li>
                 <li>
                     <NavElement
                         link="x"
-                        icon="y"
+                        icon={Calendar}
                         text="Event"/>
                 </li>
                 <li>
                     <NavElement
                         link="x"
-                        icon="y"
+                        icon={Finance}
                         text="Finance"/>
                 </li>
                 <li>
                     <NavElement
                         link="x"
-                        icon="y"
+                        icon={Food}
                         text="Food"/>
                 </li>
                 <li>
                     <NavElement
                         link="x"
-                        icon="y"
+                        icon={User}
                         text="User"/>
                 </li>
                 <li>
                     <NavElement
                         link="x"
-                        icon="y"
+                        icon={Chat}
                         text="Chat"/>
                 </li>
                 <li>
                     <NavElement
                         link="x"
-                        icon="y"
+                        icon={Activity}
                         text="Latest Activity"/>
                 </li>
             </ul>
