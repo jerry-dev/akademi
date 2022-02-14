@@ -5,7 +5,7 @@ const HomeView = () => {
     return (
         <main>
             <div className={styles.homeViewMainInnerContainer}>
-                <h1>TEST</h1>
+                <h1>HOME VIEW: WORK IN PROGRESS</h1>
             </div>
         </main>
     );
