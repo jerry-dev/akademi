@@ -27,6 +27,7 @@
     --heading-size-4: 1.5rem;
     --heading-size-5: 1.125rem;
     --heading-size-6: 0.875rem;
+    --container-1-width: 91.52542%;
 }
 
 html {
@@ -52,5 +53,13 @@ body {
 
 main {
     background-color: var(--color-7);
+    padding-top: 3.125rem;
     width: 100%;
+}
+
+main > div {
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--container-1-width);
+    outline: 2px solid red;
 }
