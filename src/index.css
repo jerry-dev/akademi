@@ -63,3 +63,8 @@ main > div {
     width: var(--container-1-width);
     outline: 2px solid red;
 }
+
+.sectionTitle {
+    color: var(--color-4);
+    font-size: var(--heading-size-3);
+}
