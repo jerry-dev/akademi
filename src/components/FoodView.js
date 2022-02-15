@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './foodview.module.css';
+import SectionTitle from './sectiontitle/SectionTitle.js';
 
 const FoodView = () => {
     return (
         <main>
             <div>
-                <h1>FOOD VIEW: WORK IN PROGRESS</h1>
+                <SectionTitle title="Food"/>
             </div>
         </main>
     );

@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './studentsview.module.css';
+import SectionTitle from './sectiontitle/SectionTitle.js';
 
 const StudentsView = () => {
     return (
         <main>
             <div>
-                <h1>STUDENTS VIEW: WORK IN PROGRESS</h1>
+                <SectionTitle title="Students"/>
             </div>
         </main>
     );

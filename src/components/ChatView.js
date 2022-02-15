@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './chatview.module.css';
+import SectionTitle from './sectiontitle/SectionTitle.js';
 
 const ChatView = () => {
     return (
         <main>
             <div>
-                <h1>CHAT VIEW: WORK IN PROGRESS</h1>
+                <SectionTitle title="Chat"/>
             </div>
         </main>
     );

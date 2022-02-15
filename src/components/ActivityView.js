@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './activityview.module.css';
+import SectionTitle from './sectiontitle/SectionTitle.js';
 
 const ActivityView = () => {
     return (
         <main>
             <div>
-                <h1>LATEST ACTIVITY VIEW: WORK IN PROGRESS</h1>
+                <SectionTitle title="Notification & Latest Activity"/>
             </div>
         </main>
     );

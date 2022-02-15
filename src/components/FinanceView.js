@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './financeview.module.css';
+import SectionTitle from './sectiontitle/SectionTitle.js';
 
 const FinanceView = () => {
     return (
         <main>
             <div>
-                <h1>FINANCE VIEW: WORK IN PROGRESS</h1>
+                <SectionTitle title="Finance"/>
             </div>
         </main>
     );

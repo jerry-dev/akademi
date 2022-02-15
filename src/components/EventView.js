@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './eventview.module.css';
+import SectionTitle from './sectiontitle/SectionTitle.js';
 
 const EventView = () => {
     return (
         <main>
             <div>
-                <h1>EVENT VIEW: WORK IN PROGRESS</h1>
+                <SectionTitle title="Events"/>
             </div>
         </main>
     );
