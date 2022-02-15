@@ -16,55 +16,55 @@ const NavList = () => {
             <ul className={styles.navlist}>
                 <li>
                     <NavElement
-                        link="x"
+                        path="/"
                         icon={Home}
                         text="Dashboard"/>
                 </li>
                 <li>
                     <NavElement
-                        link="x"
+                        path="students"
                         icon={Student}
                         text="Students"/>
                 </li>
                 <li>
                     <NavElement
-                        link="x"
+                        path="teachers"
                         icon={Student}
                         text="Teachers"/>
                 </li>
                 <li>
                     <NavElement
-                        link="x"
+                        path="event"
                         icon={Calendar}
                         text="Event"/>
                 </li>
                 <li>
                     <NavElement
-                        link="x"
+                        path="finance"
                         icon={Finance}
                         text="Finance"/>
                 </li>
                 <li>
                     <NavElement
-                        link="x"
+                        path="food"
                         icon={Food}
                         text="Food"/>
                 </li>
                 <li>
                     <NavElement
-                        link="x"
+                        path="user"
                         icon={User}
                         text="User"/>
                 </li>
                 <li>
                     <NavElement
-                        link="x"
+                        path="chat"
                         icon={Chat}
                         text="Chat"/>
                 </li>
                 <li>
                     <NavElement
-                        link="x"
+                        path="activity"
                         icon={Activity}
                         text="Latest Activity"/>
                 </li>

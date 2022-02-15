@@ -1,15 +1,16 @@
 import React from 'react';
 import styles from './navelement.module.css';
+import { Link } from "react-router-dom";
 
 const NavElement = (props) => {
     const altValue = `${props.text} route icon`;
     return (
-        <a className={styles.navElement} href={props.link}>
+        <Link className={styles.navElement} to={props.path}>
             <span>
                 <img src={props.icon} alt={altValue}/>
                 {props.text}
             </span>
-        </a>
+        </Link>
     )
 }
 
