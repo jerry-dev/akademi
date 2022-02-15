@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './navlist.module.css';
-import Home from '../assets/icons/shared/Home.svg';
-import Student from '../assets/icons/shared/Student.svg';
-import Calendar from '../assets/icons/shared/Calendar.svg';
-import Finance from '../assets/icons/shared/Finance.svg';
-import Food from '../assets/icons/shared/Food.svg';
-import User from '../assets/icons/shared/User.svg';
-import Chat from '../assets/icons/shared/Chat.svg';
-import Activity from '../assets/icons/shared/Activity.svg';
-import NavElement from './NavElement.js';
+import Home from '../../assets/icons/shared/Home.svg';
+import Student from '../../assets/icons/shared/Student.svg';
+import Calendar from '../../assets/icons/shared/Calendar.svg';
+import Finance from '../../assets/icons/shared/Finance.svg';
+import Food from '../../assets/icons/shared/Food.svg';
+import User from '../../assets/icons/shared/User.svg';
+import Chat from '../../assets/icons/shared/Chat.svg';
+import Activity from '../../assets/icons/shared/Activity.svg';
+import NavElement from '../navelement/NavElement.js';
 
 const NavList = () => {
     return (

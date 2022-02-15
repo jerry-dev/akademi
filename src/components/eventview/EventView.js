@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './eventview.module.css';
-import SectionTitle from './sectiontitle/SectionTitle.js';
+import SectionTitle from '../sectiontitle/SectionTitle.js';
 
 const EventView = () => {
     return (

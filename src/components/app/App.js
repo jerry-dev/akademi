@@ -1,14 +1,14 @@
 import React from 'react';
-import Sidebar from './Sidebar.js';
-import HomeView from './homeview/HomeView.js';
-import StudentsView from './StudentsView.js';
-import TeachersView from './TeachersView.js';
-import EventView from './EventView.js';
-import FinanceView from './FinanceView.js';
-import FoodView from './FoodView.js';
-import UserView from './UserView.js';
-import ChatView from './ChatView.js';
-import ActivityView from './ActivityView.js';
+import Sidebar from '../sidebar/Sidebar.js';
+import HomeView from '../homeview/HomeView.js';
+import StudentsView from '../studentsview/StudentsView.js';
+import TeachersView from '../teachersview/TeachersView.js';
+import EventView from '../eventview/EventView.js';
+import FinanceView from '../financeview/FinanceView.js';
+import FoodView from '../foodview/FoodView.js';
+import UserView from '../userview/UserView.js';
+import ChatView from '../chatview/ChatView.js';
+import ActivityView from '../activityview/ActivityView.js';
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {

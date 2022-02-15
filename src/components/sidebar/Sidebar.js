@@ -1,6 +1,6 @@
 import React from 'react';
-import NavList from './NavList.js';
-import CompanyLogo from './CompanyLogo.js';
+import NavList from '../navlist/NavList.js';
+import CompanyLogo from '../companylogo/CompanyLogo.js';
 import styles from './sidebar.module.css';
 
 const Sidebar = () => {

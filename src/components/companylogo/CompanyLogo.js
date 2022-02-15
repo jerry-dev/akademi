@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './companylogo.module.css';
-import logo from '../assets/icons/shared/logo.svg';
+import logo from '../../assets/icons/shared/logo.svg';
 
 const CompanyLogo = () => {
     return (

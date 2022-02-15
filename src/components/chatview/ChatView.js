@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './chatview.module.css';
-import SectionTitle from './sectiontitle/SectionTitle.js';
+import SectionTitle from '../sectiontitle/SectionTitle.js';
 
 const ChatView = () => {
     return (
