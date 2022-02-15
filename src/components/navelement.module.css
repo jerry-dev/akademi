@@ -20,24 +20,12 @@
     width: 2.5rem;
 }
 
-.navElement.active {
+.navElement[data-isactive='true'] {
     background-color: var(--color-7);
     color: var(--color-1);
 }
 
-.navElement.active span img {
-    /* 0.1 LOSS */
-    filter: invert(20%) sepia(70%) saturate(2769%) hue-rotate(237deg) brightness(89%) contrast(82%);
-}
-
-/* THIS HOVER HELPS US VISUALIZE WHEN WE ARE AT THE ROUTE. REMOVE AFTER WE HAVE ROUTES PROGRAMMED */
-.navElement:hover {
-    background-color: var(--color-7);
-    color: var(--color-1);
-}
-
-/* THIS HOVER HELPS US VISUALIZE WHEN WE ARE AT THE ROUTE. REMOVE AFTER WE HAVE ROUTES PROGRAMMED */
-.navElement:hover span img {
+.navElement[data-isactive='true'] span img {
     /* 0.1 LOSS */
     filter: invert(20%) sepia(70%) saturate(2769%) hue-rotate(237deg) brightness(89%) contrast(82%);
 }
