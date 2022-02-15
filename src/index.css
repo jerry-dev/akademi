@@ -61,7 +61,6 @@ main > div {
     margin-left: auto;
     margin-right: auto;
     width: var(--container-1-width);
-    outline: 2px solid red;
 }
 
 .sectionTitle {

@@ -1,0 +1,35 @@
+.sectionCanvas {
+    background-color: var(--color-8);
+    border-radius: 1.25rem;
+    padding-bottom: 2.8125rem;
+    padding-top: 2.875rem;
+}
+
+.sectionCanvas > div {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 88.4259259%;
+}
+
+.testStat {
+    height: 81px;
+    width: 182px;
+}
+
+.testStat:nth-child(1) {
+    background-color: lightpink;
+}
+
+.testStat:nth-child(2) {
+    background-color: lightblue;
+}
+
+.testStat:nth-child(3) {
+    background-color: lightgreen;
+}
+
+.testStat:nth-child(4) {
+    background-color: lightskyblue;
+}
