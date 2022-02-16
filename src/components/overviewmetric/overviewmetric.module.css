@@ -56,7 +56,7 @@
 
 .overviewMetric {
     animation-name: loadIn;
-    animation-duration: 0.4s;
+    animation-duration: 0.25s;
     animation-iteration-count: 1;
 }
 
