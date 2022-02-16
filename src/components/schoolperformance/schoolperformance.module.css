@@ -1,0 +1,6 @@
+.schoolPerformance {
+}
+
+.schoolPerformance div > h2 {
+    font-size: var(--heading-size-4);
+}
