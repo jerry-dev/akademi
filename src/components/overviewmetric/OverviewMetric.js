@@ -10,8 +10,8 @@ const OverviewMetric = (props) => {
                 <img src={props.icon}/>
             </picture>
             <span>
-                <p>{props.statTitle}</p>
-                <p>{props.stat}</p>
+                <h5>{props.statTitle}</h5>
+                <h3>{props.stat}</h3>
             </span>
         </div>
     );

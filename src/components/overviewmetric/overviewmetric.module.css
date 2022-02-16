@@ -41,3 +41,30 @@
     height: 100%;
     justify-content: space-between;
 }
+
+.overviewMetric span h5 {
+    color: var(--color-11);
+    font-size: var(--heading-size-5);
+    font-weight: normal;
+}
+
+.overviewMetric span h3 {
+    color: var(--color-4);
+    font-size: var(--heading-size-3);
+}
+
+
+.overviewMetric {
+    animation-name: loadIn;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes loadIn {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
