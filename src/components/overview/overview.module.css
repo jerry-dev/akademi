@@ -13,11 +13,6 @@
     width: 88.4259259%;
 }
 
-.testStat {
-    height: 81px;
-    width: 182px;
-}
-
 .testStat:nth-child(1) {
     background-color: lightpink;
 }
