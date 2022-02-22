@@ -1,13 +1,17 @@
 import React from 'react';
 import styles from './schoolperformance.module.css';
 import SectionTitle from '../sectiontitle/SectionTitle.js';
+import LineChart from '../linechart/LineChart.js';
 
 const SchoolPerformance = (props) => {
     return (
         <section className={styles.schoolPerformance}>
             <div>
-                <SectionTitle title="School Performance"/>
-                <h1>Chart</h1>
+                <header>
+                    {/* <LineChartLegends/> */}
+                    <SectionTitle title="School Performance"/>
+                </header>
+                <LineChart/>
             </div>
         </section>
     );

@@ -1,6 +1,25 @@
 .schoolPerformance {
+    background-color: var(--color-8);
+    border-radius: 1.25rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    /* We'll remove this line once the grid is defined */
+    MARGIN-TOP: 40PX;
+    /* HEIGHT: 479PX; */
 }
 
-.schoolPerformance div > h2 {
+.schoolPerformance > div {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 93.148148%;
+}
+
+.schoolPerformance > div > header {
+    margin-bottom: 1.5rem;
+}
+
+.schoolPerformance > div > header > h2 {
     font-size: var(--heading-size-4);
 }
