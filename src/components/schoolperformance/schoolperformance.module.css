@@ -17,9 +17,21 @@
 }
 
 .schoolPerformance > div > header {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 1.5rem;
 }
 
-.schoolPerformance > div > header > h2 {
+.schoolPerformance > div > header > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.schoolPerformance > div > header > div > h2 {
     font-size: var(--heading-size-4);
+}
+
+.schoolPerformance > div > header > div > div:first-child {
+    margin-right: 1.004375rem;
 }

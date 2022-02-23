@@ -1,0 +1,48 @@
+.chartMetric {
+    display: flex;
+    flex-direction: column;
+}
+
+.chartMetric h5 {
+    color: var(--color-11);
+    font-size: var(--heading-siz-6);
+    font-weight: normal;
+    line-height: 1.3125rem;
+    margin-bottom: 0.25rem;
+}
+
+.chartMetric h3 {
+    color: var(--color-4);
+    font-weight: bold;
+    font-size: var(--heading-siz-5);
+}
+
+.chartMetric h5 > span {
+    display: inline-block;
+    background-color: red;
+    border-radius: 50%;
+    height: 0.75rem;
+    margin-right: 0.5rem;
+    position: relative;
+    width: 0.75rem;
+}
+
+.chartMetric h5 > span::after {
+    content: '';
+    background-color: var(--color-8);
+    border-radius: 50%;
+    height: 50%;
+    left: 50%;
+    position: absolute;
+    top: 25%;
+    transform: translateX(-50%);
+    width: 50%;
+}
+
+.chartMetric h5 > span[data-style="one"] {
+    background-color: var(--color-3);
+}
+
+.chartMetric h5 > span[data-style="two"] {
+    background-color: var(--color-2);
+}
