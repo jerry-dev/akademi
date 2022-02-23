@@ -1,0 +1,4 @@
+.unpaidStudent {
+    grid-column: 1 / -1;
+    height: 45.3125rem;
+}
