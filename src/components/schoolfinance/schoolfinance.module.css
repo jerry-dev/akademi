@@ -1,4 +1,39 @@
 .schoolFinance {
     grid-column: span 1;
     height: 35.125rem;
+    padding-top: 2rem;
+}
+
+.schoolFinance > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 87.11538%;
+}
+
+.schoolFinance > div > header > h2 {
+    font-size: var(--header-size-4);
+}
+
+.schoolFinance > div > header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.schoolFinance > div > header > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.schoolFinance > div > header > div > h2 {
+    font-size: var(--heading-size-4);
+}
+
+.schoolFinance > div > header > div > div:first-child {
+    margin-right: 1.004375rem;
 }
