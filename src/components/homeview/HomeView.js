@@ -6,21 +6,25 @@ import SchoolPerformance from '../schoolperformance/SchoolPerformance.js';
 import SchoolCalendar from '../schoolcalendar/SchoolCalendar.js';
 import SchoolFinance from '../schoolfinance/SchoolFinance.js';
 import UnpaidStudent from '../unpaidstudent/UnpaidStudent.js';
+import RightMenu from '../rightmenu/RightMenu.js';
 
 const HomeView = () => {
     return (
-        <main>
-            <div className={styles.homeViewMainInnerContainer}>
-                <header>
-                    <SectionTitle title="Dashboard"/>
-                </header>                
-                <Overview/>
-                <SchoolPerformance/>
-                <SchoolCalendar/>
-                <SchoolFinance/>
-                <UnpaidStudent/>
-            </div>
-        </main>
+        <React.Fragment>
+            <main>
+                <div className={styles.homeViewMainInnerContainer}>
+                    <header>
+                        <SectionTitle title="Dashboard"/>
+                    </header>                
+                    <Overview/>
+                    <SchoolPerformance/>
+                    <SchoolCalendar/>
+                    <SchoolFinance/>
+                    <UnpaidStudent/>
+                </div>
+            </main>
+            <RightMenu/>
+        </React.Fragment>
     );
 }
 
