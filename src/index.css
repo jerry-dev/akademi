@@ -64,6 +64,11 @@ main > div {
     width: var(--container-1-width);
 }
 
+section {
+    background-color: var(--color-8);
+    border-radius: 1.25rem;
+}
+
 .sectionTitle {
     color: var(--color-4);
     font-size: var(--heading-size-3);
