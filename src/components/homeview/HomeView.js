@@ -8,7 +8,9 @@ const HomeView = () => {
     return (
         <main>
             <div className={styles.homeViewMainInnerContainer}>
-                <SectionTitle title="Dashboard"/>
+                <header>
+                    <SectionTitle title="Dashboard"/>
+                </header>                
                 <Overview/>
                 <SchoolPerformance/>
             </div>
