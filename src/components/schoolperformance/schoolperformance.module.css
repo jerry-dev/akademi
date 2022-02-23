@@ -1,12 +1,9 @@
 .schoolPerformance {
     background-color: var(--color-8);
     border-radius: 1.25rem;
+    grid-column: 1 / -1;
     padding-bottom: 2rem;
     padding-top: 2rem;
-
-    /* We'll remove this line once the grid is defined */
-    MARGIN-TOP: 40PX;
-    /* HEIGHT: 479PX; */
 }
 
 .schoolPerformance > div {
