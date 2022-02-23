@@ -1,6 +1,20 @@
 .chartMetric {
     display: flex;
     flex-direction: column;
+
+    animation-name: fadeIn;
+    animation-duration: var(--animation-duration-1);
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .chartMetric h5 {
