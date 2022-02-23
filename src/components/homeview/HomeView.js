@@ -11,7 +11,7 @@ import RightMenu from '../rightmenu/RightMenu.js';
 const HomeView = () => {
     return (
         <React.Fragment>
-            <main>
+            <main className={styles.homeViewMain}>
                 <div className={styles.homeViewMainInnerContainer}>
                     <header>
                         <SectionTitle title="Dashboard"/>
