@@ -1,0 +1,9 @@
+.figure {
+    height: 26.25rem;
+    width: 100%;
+}
+
+.figure canvas {
+    height: 100%;
+    width: 100%;
+}

@@ -6,15 +6,14 @@
 
 .schoolFinance > div {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     width: 87.11538%;
 }
 
 .schoolFinance > div > header > h2 {
-    font-size: var(--header-size-4);
+    font-size: var(--heading-size-4);
 }
 
 .schoolFinance > div > header {

@@ -23,7 +23,7 @@
     justify-content: space-between;
 }
 
-.schoolPerformance > div > header > div > h2 {
+.schoolPerformance > div > header > h2 {
     font-size: var(--heading-size-4);
 }
 
