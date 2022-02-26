@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './unpaidstudent.module.css';
 import SectionTitle from '../sectiontitle/SectionTitle.js';
 
-const UnpaidStudent =  (props) => {
+const UnpaidStudent = (props) => {
     return (
         <section className={styles.unpaidStudent}>
             <div>
