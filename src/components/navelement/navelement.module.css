@@ -1,6 +1,6 @@
 .navElement {
     align-items: center;
-    border-radius: 40px 0px 0px 40px;
+    border-radius: 2.5rem 0px 0px 2.5rem;
     color: var(--color-10);
     display: flex;
     font-size: var(--font-size-1);
@@ -25,9 +25,8 @@
     color: var(--color-1);
 }
 
-.navElement[data-isactive='true'] span img {
-    /* 0.1 LOSS */
-    filter: invert(20%) sepia(70%) saturate(2769%) hue-rotate(237deg) brightness(89%) contrast(82%);
+.navElement[data-isactive='false'] span img {
+    opacity: 0.6;
 }
 
 .navElement span {

@@ -7,23 +7,25 @@ const NavElement = (props) => {
     const altValue = `${props.text} route icon`;
 
     let location = useLocation();
-    let isActive = {'data-isactive': "false"};
+    let isActive = {'data-isactive': false};
     let thePath = (props.path === '/') ? '/' : `/${props.path}`;
 
     (location.pathname === `${thePath}`)
-            ? isActive = {'data-isactive': "true"}
-            : isActive = {'data-isactive': "false"};
+            ? isActive = {'data-isactive': true}
+            : isActive = {'data-isactive': false};
 
     React.useEffect(() => {       
         (location.pathname === `${thePath}`)
-            ? isActive = {'data-isactive': "true"}
-            : isActive = {'data-isactive': "false"};
+            ? isActive = {'data-isactive': true}
+            : isActive = {'data-isactive': false};
     }, [location]);
+
+    const icon = (!isActive['data-isactive']) ? props.icon : props.blueIcon;
     
     return (
         <Link className={styles.navElement} {...isActive} to={props.path}>
             <span>
-                <img src={props.icon} alt={altValue}/>
+                <img src={icon} alt={altValue}/>
                 {props.text}
             </span>
         </Link>
