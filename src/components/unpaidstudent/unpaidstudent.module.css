@@ -2,27 +2,52 @@
     grid-column: 1 / -1;
     
     padding-top: 2rem;
+    /* OUTLINE: 3PX SOLID BLACK; */
 
-    /* Temporary. The inner components should dictate the height */
-    HEIGHT: 45.3125rem;
+    /* BACKGROUND-COLOR: lightcoral; */
+}
+
+.unpaidStudent ul {
+    list-style: none;
+    /* BACKGROUND-COLOR: LIGHTGREEN; */
 }
 
 .unpaidStudent > div {
     display: flex;
     flex-direction: column;
     width: 100%;
-
-    background-color: lightblue;
 }
 
 .unpaidStudent > div > header {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1.5rem;
     width: 94.074%;
-
-    background-color: lightpink;
+    /* BACKGROUND-COLOR: LIGHTPINK; */
+    /* OUTLINE: 3PX SOLID black; */
 }
 
 .unpaidStudent > div > header > h2 {
     font-size: var(--heading-size-4);
+}
+
+.unpaidStudent footer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-top: 1.875rem;
+    width: 94.074%;
+}
+
+.unpaidStudent footer small {
+    color: var(--color-11);
+    font-size: var(--font-size-2);
+}
+
+.unpaidStudent footer small span {
+    color: rgba(54, 59, 100, 1)
 }

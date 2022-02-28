@@ -1,0 +1,56 @@
+.paginator {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 17.5rem;
+    width: 100%;
+}
+
+.paginator button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.paginator button > * {
+    pointer-events: none;
+}
+
+.paginator .arrow {
+    height: 2rem;
+    width: 2rem;
+}
+
+.paginator .arrow:nth-child(1) {
+}
+
+.paginator .arrow:nth-child(3) {
+}
+
+
+.paginator > div {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 11.375rem;
+    width: 100%;
+}
+.paginator .circleNav {
+    border: 0.125rem solid var(--color-11);
+    border-radius: 50%;
+    color: var(--color-11);
+    font-size: var(--font-size-2);
+    height: 3.125rem;
+    justify-content: center;
+    width: 3.125rem;
+}
+
+.paginator .circleNav[data-selected="true"] {
+    background-color: var(--color-1);
+    border: none;
+    color: var(--color-8);
+}

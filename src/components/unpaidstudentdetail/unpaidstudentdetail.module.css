@@ -1,0 +1,86 @@
+.article {
+    padding-bottom: 1.75rem;
+    padding-top: 1.75rem;
+    width: 100%;
+}
+
+.article > div {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 94.074074%;
+}
+
+.article .avatarContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-right: 6.8125rem;
+    max-width: 15.25rem;
+    width: 100%;
+}
+
+.article .avatarContainer > img {
+    background-color: var(--color-10);
+    border-radius: 50%;
+    height: 3rem;
+    margin-right: 9.836%;
+    width: 3rem;
+}
+
+.article .avatarContainer > figcaption {
+    color: var(--color-4);
+    font-size: var(--font-size-1);
+    font-weight: 600;
+}
+
+.article > div > div {
+    align-items: center;
+    color: var(--color-11);
+    display: flex;
+    flex-direction: row;
+    max-width: 41.4375rem;
+    width: 100%;
+}
+
+.article > div > div span {
+    color: var(--color-1);
+    font-size: var(--font-size-1);
+    font-weight: 600;
+}
+
+.article .studentId {
+    margin-right: 14.027149%;
+}
+
+.article > div > div > article {
+    margin-right: 15.082956%;
+}
+
+.article .debt {
+    margin-right: 13.57466%;
+}
+
+.article > div > div > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+}
+
+.article > div > div button > * {
+	pointer-events: none;
+}
+
+.article .printButton {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.article .ellipsisButton {
+    height: 1.5rem;
+    margin-left: 4.826546%;
+    width: 1.5rem;
+}
