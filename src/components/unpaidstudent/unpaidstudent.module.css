@@ -1,15 +1,10 @@
 .unpaidStudent {
     grid-column: 1 / -1;
-    
     padding-top: 2rem;
-    /* OUTLINE: 3PX SOLID BLACK; */
-
-    /* BACKGROUND-COLOR: lightcoral; */
 }
 
 .unpaidStudent ul {
     list-style: none;
-    /* BACKGROUND-COLOR: LIGHTGREEN; */
 }
 
 .unpaidStudent > div {
@@ -23,8 +18,6 @@
     margin-right: auto;
     margin-bottom: 1.5rem;
     width: 94.074%;
-    /* BACKGROUND-COLOR: LIGHTPINK; */
-    /* OUTLINE: 3PX SOLID black; */
 }
 
 .unpaidStudent > div > header > h2 {
