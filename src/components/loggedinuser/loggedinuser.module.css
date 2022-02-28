@@ -1,0 +1,35 @@
+.loggedInUser {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 9.25rem;
+    width: 100%;
+}
+
+.loggedInUser > img {
+    background-color: var(--color-10);
+    border-radius: 50%;
+    height: 3.75rem;
+    width: 3.75rem;
+}
+
+.loggedInUser > figcaption {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    max-height: 2.875rem;
+}
+
+.loggedInUser > figcaption h6 {
+    color: var(--color-4);
+    font-size: var(--heading-size-6);
+    font-weight: 600;
+}
+
+.loggedInUser > figcaption small {
+    color: var(--color-11);
+    font-size: var(--font-size-2);
+}
