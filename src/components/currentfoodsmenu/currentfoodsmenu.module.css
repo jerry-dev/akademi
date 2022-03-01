@@ -1,3 +1,7 @@
+.currentFoodsMenu > header {
+    margin-bottom: 1.8125rem;
+}
+
 .currentFoodsMenu > header h2 {
     font-size: var(--heading-size-4);
 }
