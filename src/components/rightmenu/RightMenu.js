@@ -3,6 +3,7 @@ import styles from './rightmenu.module.css';
 import MenuHeader from '../menuheader/MenuHeader.js';
 import RecentStudents from '../recentstudents/RecentStudents.js';
 import Messages from '../messages/Messages.js';
+import CurrentFoodsMenu from '../currentfoodsmenu/CurrentFoodsMenu.js';
 
 
 const RightMenu = (props) => {
@@ -12,6 +13,7 @@ const RightMenu = (props) => {
                 <MenuHeader/>
                 <RecentStudents/>
                 <Messages/>
+                <CurrentFoodsMenu/>
             </div>
         </aside>
     );

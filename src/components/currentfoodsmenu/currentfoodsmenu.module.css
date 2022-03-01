@@ -1,0 +1,6 @@
+.currentFoodsMenu {}
+
+
+.currentFoodsMenu > header h2 {
+    font-size: var(--heading-size-4);
+}
