@@ -1,0 +1,52 @@
+.recentStudentListElement {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.recentStudentListElement > figure {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    max-width: 12.375rem;
+    width: 100%;
+}
+
+.recentStudentListElement > figure img {
+    background-color: var(--color-10);
+    border-radius: 50%;
+    height: 3rem;
+    margin-right: 8.08%;
+    min-width: 3rem;
+}
+
+.recentStudentListElement > figure figcaption h6 {
+    color: var(--color-4);
+    font-size: var(--heading-size-6);
+    font-weight: 600;
+}
+
+.recentStudentListElement > figure figcaption small {
+    color: var(--color-11);
+    font-size: var(--font-size-2);
+}
+
+.recentStudentListElement > button {
+    background: none;
+    border: 2px solid var(--color-11);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+}
+
+.recentStudentListElement > button:hover {
+    background-color: var(--color-1);
+    border: none;
+}
+
+.recentStudentListElement > button:hover img {
+    filter: brightness(200%) contrast(200%) saturate(0%);
+}

@@ -1,0 +1,73 @@
+.recentStudent > header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2.1875rem;
+}
+
+.recentStudent > header div {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+Move this to button elements within the global css file
+.recentStudent button:active {
+    transform: scale(0.9);
+}
+
+.recentStudent > header div h2 {
+    font-size: var(--heading-size-4);
+}
+
+.recentStudent > header div p {
+    color: var(--color-11);
+    font-size: var(--font-size-2);
+}
+
+.recentStudent > header div span {
+    font-weight: 600;
+}
+
+.recentStudent > header button {
+    background: none;
+    border: none;
+
+    background-color: var(--color-1);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+}
+
+.recentStudent > header button > * {
+    pointer-events: none;
+}
+
+.recentStudent > ul {
+    list-style: none;
+}
+
+.recentStudent > ul li {
+    margin-bottom: 2rem;
+}
+
+.recentStudent > .loadMore {
+    background: none;
+    background-color: var(--color-12);
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    height: 3.8125rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 19.5rem;
+    width: 100%;
+}
+
+.recentStudent > .loadMore > p {
+    color: var(--color-1);
+    font-size: var(--font-size-1);
+    font-weight: 600;
+}
