@@ -1,8 +1,9 @@
-.currentFoodsMenu {}
-
-
 .currentFoodsMenu > header h2 {
     font-size: var(--heading-size-4);
+}
+
+.currentFoodsMenu > ul {
+    list-style: none;
 }
 
 .currentFoodsMenu > .loadMore {
