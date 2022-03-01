@@ -1,0 +1,28 @@
+.currentFoodItem {
+    margin-bottom: 2rem;
+}
+
+.currentFoodItem > figure {
+    max-width: 19.5rem;
+    width: 100%;
+}
+
+.currentFoodItem > figure img {
+    background-color: var(--color-10);
+    border-radius: 1.125rem;
+    margin-bottom: 1.5rem;
+    min-height: 10rem;
+    min-width: 100%;
+}
+
+.currentFoodItem > figure > figcaption > h5 {
+    color: var(--color-4);
+    font-size: var(--heading-size-5);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.currentFoodItem > figure > figcaption > p {
+    color: var(--color-11);
+    font-size: var(--font-size-2);
+}
