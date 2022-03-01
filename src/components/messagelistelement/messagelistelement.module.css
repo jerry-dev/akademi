@@ -1,0 +1,52 @@
+.messageListElement {
+    max-width: 19.5625rem;
+    width: 100%;
+    position: relative;
+}
+
+.messageListElement > figure {
+    display: flex;
+    max-width: 16.5625rem;
+    width: 100%;
+}
+
+.messageListElement > figure > figcaption {
+    align-items: flex-start;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 12.5625rem;
+    width: 100%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.messageListElement > figure > img {
+    background-color: var(--color-10);
+    border-radius: 50%;
+    height: 3rem;
+    margin-right: 6.0377%;
+    min-width: 3rem;
+}
+
+.messageListElement > figure > figcaption > h6 {
+    color: var(--color-4);
+    font-size: var(--font-size-2);
+    font-weight: 600;
+}
+
+.messageListElement > figure > figcaption > p {
+    color: var(--color-11);
+    font-size: var(--font-size-2);
+    width: 100%;
+}
+
+.messageListElement > time {
+    color: var(--color-11);
+    font-size: var(--font-size-2);
+    position: absolute;
+    right: 0;
+    top: 0;
+}

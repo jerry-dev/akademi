@@ -1,0 +1,49 @@
+.messages {
+    margin-bottom: 4rem;
+}
+
+.messages > ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.messages > ul > li {
+    border-bottom: 0.0625rem solid var(--color-11);
+    padding-bottom: 1.4375rem;
+    padding-top: 1.3125rem;
+}
+
+.messages > header {
+    margin-bottom: 1.5rem;
+}
+
+.messages > header h2 {
+    font-size: var(--heading-size-4);
+}
+
+.messages > .loadMore {
+    background: none;
+    background-color: var(--color-12);
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    height: 3.8125rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 19.5rem;
+    width: 100%;
+}
+
+.messages > .loadMore > * {
+    pointer-events: none;
+}
+
+.messages > .loadMore:active {
+    transform: scale(0.9);
+}
+
+.messages > .loadMore > p {
+    color: var(--color-1);
+    font-size: var(--font-size-1);
+    font-weight: 600;
+}

@@ -83,6 +83,10 @@
     width: 100%;
 }
 
+.recentStudent > .loadMore > * {
+    pointer-events: none;
+}
+
 .recentStudent > .loadMore > p {
     color: var(--color-1);
     font-size: var(--font-size-1);
