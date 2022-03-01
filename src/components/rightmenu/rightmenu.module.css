@@ -1,6 +1,7 @@
 .rightMenu {
     background-color: var(--color-8);
     height: 100%;
+    padding-bottom: 2.5rem;
     padding-top: 3.125rem;
     max-width: 24.6875rem;
     width: 100%;
