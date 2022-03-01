@@ -15,9 +15,6 @@ const messages = [
         <MessageListElement senderName="Tony Soap" messagePreview="Lorem ipsum dolor sit amet..." sentTime="12:45 PM"/>
     </li>,
     <li>
-        <MessageListElement senderName="Karen Hope" messagePreview="Lorem ipsum dolor sit amet..." sentTime="12:45 PM"/>
-    </li>,
-    <li>
         <MessageListElement senderName="Jordan Nico" messagePreview="Lorem ipsum dolor sit amet..." sentTime="12:45 PM"/>
     </li>,
     <li>
