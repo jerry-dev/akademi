@@ -609,3 +609,5 @@ const initialState = {
         "studentEmail": "jason.nelson@email.com"
     }]
 }
+
+const reducer = (state = initialState, action) => {};
