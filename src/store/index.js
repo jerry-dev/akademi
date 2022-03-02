@@ -611,4 +611,9 @@ const initialState = {
     }]
 }
 
-const reducer = (state = initialState, action) => {};
+const reducer = (state = initialState, action) => {
+    if (typeof actions[action] !== 'function') {
+        console.error(`The action "${action}" doesn't exist.`);
+        return false;
+    }
+};
