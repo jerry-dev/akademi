@@ -11,6 +11,7 @@ import ChatView from '../chatview/ChatView.js';
 import ActivityView from '../activityview/ActivityView.js';
 import { Routes, Route } from 'react-router-dom';
 import store from './store/index.js';
+import { Provider } from 'react-redux';
 
 const App = () => {
     return (
