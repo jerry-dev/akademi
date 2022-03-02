@@ -1,4 +1,5 @@
-import {createStore } from 'redux';
+import { createStore } from 'redux';
+import actions from './actions.js';
 
 const initialState = {
     overview: [
