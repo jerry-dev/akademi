@@ -616,4 +616,6 @@ const reducer = (state = initialState, action) => {
         console.error(`The action "${action.type}" doesn't exist.`);
         return false;
     }
+
+    return actions[action.type]();
 };
