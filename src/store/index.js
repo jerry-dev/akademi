@@ -619,3 +619,5 @@ const reducer = (state = initialState, action) => {
 
     return actions[action.type]();
 };
+
+const store = createStore(reducer);
