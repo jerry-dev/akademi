@@ -29,4 +29,8 @@ const HomeView = () => {
     );
 }
 
+const mapStateToProps = (state) => {
+    return {};
+};
+
 export default HomeView;
