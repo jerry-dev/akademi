@@ -612,12 +612,13 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-    if (typeof actions[action.type] !== 'function') {
-        console.error(`The action "${action.type}" doesn't exist.`);
-        return false;
+    switch (action.type) {
+        case 'getHomeData':
+            actions['getHomeData']();
+            break;
     }
-
-    return actions[action.type]();
+    
+    return state;
 };
 
 const store = createStore(reducer);
