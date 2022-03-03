@@ -9,7 +9,7 @@ import UnpaidStudent from '../unpaidstudent/UnpaidStudent.js';
 import RightMenu from '../rightmenu/RightMenu.js';
 import { connect } from 'react-redux';
 
-const HomeView = () => {
+const HomeView = ({overviewData}) => {
     return (
         <React.Fragment>
             <main className={styles.homeViewMain}>
