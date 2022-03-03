@@ -33,4 +33,4 @@ const mapStateToProps = (state) => {
     return { oveviewData: state.overview };
 };
 
-export default HomeView;
+export default connect(mapStateToProps)(HomeView);
