@@ -30,7 +30,7 @@ const HomeView = ({overviewData}) => {
 }
 
 const mapStateToProps = (state) => {
-    return { overview: state.overview };
+    return { overviewData: state.overview };
 };
 
 export default connect(mapStateToProps)(HomeView);
