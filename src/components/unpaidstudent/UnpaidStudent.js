@@ -4,56 +4,43 @@ import SectionTitle from '../sectiontitle/SectionTitle.js';
 import UnpaidStudentDetail from '../unpaidstudentdetail/UnpaidStudentDetail.js';
 import Paginator from '../paginator/Paginator.js';
 
-const start = 1;
-const end = 5;
-const total = 100;
-
 const UnpaidStudent = (props) => {
+    const [ page, setPage ] = React.useState(0);
+
+    const maxDocPerPage = 5;
+    const buckets = {};
+    let index = 0;
+
+    for (let i = 0; i < props.unpaidStudents.length; i++) {
+        for (let j = 0; j < maxDocPerPage; j++) {
+            if (props.unpaidStudents[index]) {
+                if (!Array.isArray(buckets[i])) {
+                    buckets[i] = [];
+                }
+                buckets[i].push(props.unpaidStudents[index]);
+                index++;
+            }
+        }
+    }
+
     return (
         <section className={styles.unpaidStudent}>
             <div>
                 <header>
                     <SectionTitle title="Unpaid Student Intuition"/>                   
                 </header>
-                <ul>
-                    <li>
-                        <UnpaidStudentDetail
-                        studentFullName="Samantha William"
-                        studentId="123456789"
-                        studentClass="VII A"
-                        studentDebt="$90,999"/>
-                    </li>
-                    <li>
-                        <UnpaidStudentDetail
-                        studentFullName="Samantha William"
-                        studentId="123456789"
-                        studentClass="VII A"
-                        studentDebt="$90,999"/>
-                    </li>
-                    <li>
-                        <UnpaidStudentDetail
-                        studentFullName="Samantha William"
-                        studentId="123456789"
-                        studentClass="VII A"
-                        studentDebt="$90,999"/>
-                    </li>
-                    <li>
-                        <UnpaidStudentDetail
-                        studentFullName="Samantha William"
-                        studentId="123456789"
-                        studentClass="VII A"
-                        studentDebt="$90,999"/>
-                    </li>
-                    <li>
-                        <UnpaidStudentDetail
-                        studentFullName="Samantha William"
-                        studentId="123456789"
-                        studentClass="VII A"
-                        studentDebt="$90,999"/>
-                    </li>
-                </ul>
+                <ul>{
+                    buckets[page].map((doc) => {
+                        return <li><UnpaidStudentDetail
+                            studentFullName={doc.name}
+                            studentId={doc.studentId}
+                            studentClass={doc.studentClass}
+                            studentDebt={doc.studentDebt}/>
+                        </li>
+                    })
+                }</ul>
                 <footer>
-                    <small>Showing <span>{start}</span>-<span>{end}</span> from <span>{total}</span> data</small>
+                    <small>Showing <span>{page+1}</span>-<span>{page+5}</span> from <span>{props.unpaidStudents.length}</span> data</small>
                     <Paginator/>
                 </footer>
             </div>
