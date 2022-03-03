@@ -17,7 +17,7 @@ const HomeView = ({overviewData}) => {
                     <header>
                         <SectionTitle title="Dashboard"/>
                     </header>                
-                    <Overview/>
+                    <Overview metricsData={overviewData}/>
                     <SchoolPerformance/>
                     <SchoolCalendar/>
                     <SchoolFinance/>
