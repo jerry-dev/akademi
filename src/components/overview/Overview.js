@@ -1,20 +1,32 @@
 import React from 'react';
 import styles from './overview.module.css';
 import OverviewMetric from '../overviewmetric/OverviewMetric.js';
-import Student from '../../assets/icons/shared/Student.svg';
-import Teacher from '../../assets/icons/shared/Teacher.svg';
-import Calendar from '../../assets/icons/shared/Calendar.svg';
-import Food from '../../assets/icons/shared/Food.svg';
+import students from '../../assets/icons/shared/Student.svg';
+import teachers from '../../assets/icons/shared/Teacher.svg';
+import events from '../../assets/icons/shared/Calendar.svg';
+import foods from '../../assets/icons/shared/Food.svg';
 
 const Overview = (props) => {
+    const iconManager = (name) => {
+        return {
+            'students': students,
+            'teachers': teachers,
+            'events': events,
+            'foods': foods,
+        }[name]
+    }
+    
     return (
         <section className={styles.sectionCanvas}>
-            <div>
-                <OverviewMetric icon={Student} statTitle="Students" stat="932"/>
-                <OverviewMetric icon={Teacher} statTitle="Teachers" stat="754"/>
-                <OverviewMetric icon={Calendar} statTitle="Events" stat="40"/>
-                <OverviewMetric icon={Food} statTitle="Foods" stat="32k"/>
-            </div>
+            <div>{
+                    props.metricsData.map((metric) => {
+                        return <OverviewMetric
+                        icon={iconManager(metric.title)}
+                        statTitle={metric.title}
+                        stat={metric.stat.replace(/\,.*/, "K")}
+                        />
+                })
+            }</div>
         </section>
     );
 };
