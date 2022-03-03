@@ -30,7 +30,7 @@ const HomeView = ({overviewData}) => {
 }
 
 const mapStateToProps = (state) => {
-    return { overviewData: state.overview };
+    return { overviewData: state.overview, unpaidData: state.unpaidstudentintuition };
 };
 
 export default connect(mapStateToProps)(HomeView);
