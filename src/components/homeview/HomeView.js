@@ -21,7 +21,7 @@ const HomeView = ({ overviewData, unpaidData }) => {
                     <SchoolPerformance/>
                     <SchoolCalendar/>
                     <SchoolFinance/>
-                    <UnpaidStudent/>
+                    <UnpaidStudent unpaidStudents={unpaidData}/>
                 </div>
             </main>
             <RightMenu/>
