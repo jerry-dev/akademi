@@ -15,15 +15,15 @@ const Overview = (props) => {
             'foods': foods,
         }[name]
     }
-    
+
     return (
         <section className={styles.sectionCanvas}>
             <div>{
                     props.metricsData.map((metric) => {
                         return <OverviewMetric
                         icon={iconManager(metric.title)}
-                        statTitle={metric.title}
-                        stat={metric.stat.replace(/\,.*/, "K")}
+                        statTitle={metric.title.replace(metric.title[0], metric.title[0].toUpperCase())}
+                        stat={metric.stat.replace(/\,.*/, "k")}
                         />
                 })
             }</div>
