@@ -7,6 +7,7 @@ import SchoolCalendar from '../schoolcalendar/SchoolCalendar.js';
 import SchoolFinance from '../schoolfinance/SchoolFinance.js';
 import UnpaidStudent from '../unpaidstudent/UnpaidStudent.js';
 import RightMenu from '../rightmenu/RightMenu.js';
+import { connect } from 'react-redux';
 
 const HomeView = () => {
     return (
