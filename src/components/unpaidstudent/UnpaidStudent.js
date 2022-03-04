@@ -41,7 +41,7 @@ const UnpaidStudent = (props) => {
                 }</ul>
                 <footer>
                     <small>Showing <span>{page}</span>-<span>{page+4}</span> from <span>{props.unpaidStudents.length}</span> data</small>
-                    <Paginator/>
+                    <Paginator currentPage={page}/>
                 </footer>
             </div>
         </section>
