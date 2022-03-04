@@ -13,10 +13,10 @@ const Paginator = (props) => {
                 <button data-selected="true" type="button" id="firstCircleNav" className={styles.circleNav}>
                     <output>1</output>
                 </button>
-                <button type="button" id="firstCircleNav" className={styles.circleNav}>
+                <button type="button" id="secondCircleNav" className={styles.circleNav}>
                     <output>2</output>
                 </button>
-                <button type="button" id="firstCircleNav" className={styles.circleNav}>
+                <button type="button" id="thirdCircleNav" className={styles.circleNav}>
                     <output>3</output>
                 </button>
             </div>
