@@ -23,6 +23,31 @@ const UnpaidStudent = (props) => {
         }
     }
 
+    const paginatorButtonsHandler = (event) => {
+        return {
+            'previousArrow': () => {
+                if (buckets[page-1]) {
+                    setPage(page-1);
+                }
+            },
+            'secondCircleNav': () => {
+                if (buckets[page+1]) {
+                    setPage(page+1);
+                }
+            },
+            'thirdCircleNav': () => {
+                if (buckets[page+2]) {
+                    setPage(page+2);
+                }
+            },
+            'nextArrow': () => {
+                if (buckets[page+2]) {
+                    setPage(page+2);
+                }
+            },
+        }[event.target.id]()
+    };
+
     return (
         <section className={styles.unpaidStudent}>
             <div>
