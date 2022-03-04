@@ -5,13 +5,13 @@ import UnpaidStudentDetail from '../unpaidstudentdetail/UnpaidStudentDetail.js';
 import Paginator from '../paginator/Paginator.js';
 
 const UnpaidStudent = (props) => {
-    const [ page, setPage ] = React.useState(0);
+    const [ page, setPage ] = React.useState(1);
 
     const maxDocPerPage = 5;
     const buckets = {};
     let index = 0;
 
-    for (let i = 0; i < props.unpaidStudents.length; i++) {
+    for (let i = 1; i <= props.unpaidStudents.length; i++) {
         for (let j = 0; j < maxDocPerPage; j++) {
             if (props.unpaidStudents[index]) {
                 if (!Array.isArray(buckets[i])) {
@@ -40,7 +40,7 @@ const UnpaidStudent = (props) => {
                     })
                 }</ul>
                 <footer>
-                    <small>Showing <span>{page+1}</span>-<span>{page+5}</span> from <span>{props.unpaidStudents.length}</span> data</small>
+                    <small>Showing <span>{page}</span>-<span>{page+4}</span> from <span>{props.unpaidStudents.length}</span> data</small>
                     <Paginator/>
                 </footer>
             </div>
