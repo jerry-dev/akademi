@@ -24,6 +24,7 @@ const UnpaidStudent = (props) => {
     }
 
     const paginatorButtonsHandler = (event) => {
+        console.log(event.target);
         return {
             'previousArrow': () => {
                 if (buckets[page-1]) {
@@ -66,7 +67,7 @@ const UnpaidStudent = (props) => {
                 }</ul>
                 <footer>
                     <small>Showing <span>{page}</span>-<span>{page+4}</span> from <span>{props.unpaidStudents.length}</span> data</small>
-                    <Paginator currentPage={page}/>
+                    <Paginator currentPage={page} buttonsHandler={paginatorButtonsHandler}/>
                 </footer>
             </div>
         </section>
