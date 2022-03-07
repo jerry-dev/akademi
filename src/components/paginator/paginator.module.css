@@ -22,13 +22,6 @@
     width: 2rem;
 }
 
-.paginator .arrow:nth-child(1) {
-}
-
-.paginator .arrow:nth-child(3) {
-}
-
-
 .paginator > div {
     align-items: center;
     display: flex;
@@ -52,5 +45,6 @@
 .paginator .circleNav[data-selected="true"] {
     background-color: var(--color-1);
     border: none;
+    box-shadow: 0px 0.4375rem 1rem rgba(0, 0, 0, 0.14);
     color: var(--color-8);
 }
