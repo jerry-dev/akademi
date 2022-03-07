@@ -60,7 +60,6 @@
 }
 
 .article .debt {
-    margin-right: 13.57466%;
 }
 
 .article > div > div > button {
@@ -77,6 +76,7 @@
 .article .printButton {
     height: 1.5rem;
     width: 1.5rem;
+    margin-left: auto;
 }
 
 .article .ellipsisButton {
