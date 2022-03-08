@@ -9,7 +9,17 @@ import UnpaidStudent from '../unpaidstudent/UnpaidStudent.js';
 import RightMenu from '../rightmenu/RightMenu.js';
 import { connect } from 'react-redux';
 
-const HomeView = ({ overviewData, unpaidData }) => {
+const HomeView = ({ overviewData, students }) => {
+    const unpaidData = students.map((student) => {
+        return {
+            studentFullName: student.studentName,
+            studentId: student.id,
+            studentClass: student.academicRecords.class,
+            studentDebt: student.financialRecords.debt,
+            studentPhoto: student.bio.profilePhoto
+        };
+    });
+
     return (
         <React.Fragment>
             <main className={styles.homeViewMain}>
@@ -30,7 +40,7 @@ const HomeView = ({ overviewData, unpaidData }) => {
 }
 
 const mapStateToProps = (state) => {
-    return { overviewData: state.overview, unpaidData: state.unpaidstudentintuition };
+    return { overviewData: state.overview, students: state.students };
 };
 
 export default connect(mapStateToProps)(HomeView);

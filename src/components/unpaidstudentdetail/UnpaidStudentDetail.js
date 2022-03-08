@@ -5,12 +5,12 @@ import printImage from '../../assets/icons/shared/print.svg';
 import Dots from '../../assets/icons/shared/Dots.svg';
 
 const UnpaidStudentDetail = (props) => {
+    const altValue = `Student ${props.studentFullName}'s profile photo`;
     return (
         <article className={styles.article}>
             <div>
                 <figure className={styles.avatarContainer}>
-                    {/* <img src alt='Student profile picture'/> */}
-                    <img src/>
+                    <img src={props.studentPhoto} alt={altValue}/>
                     <figcaption>
                         <p>{props.studentFullName}</p>
                     </figcaption>

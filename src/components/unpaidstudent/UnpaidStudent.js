@@ -131,7 +131,8 @@ const UnpaidStudent = (props) => {
                 <ul>{
                     bucketsContainer[bucketBeingShown].map((doc) => {
                         return <li><UnpaidStudentDetail
-                            studentFullName={doc.name}
+                            studentPhoto={doc.studentPhoto}
+                            studentFullName={doc.studentFullName}
                             studentId={doc.studentId}
                             studentClass={doc.studentClass}
                             studentDebt={doc.studentDebt}/>
