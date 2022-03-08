@@ -20,6 +20,13 @@ const HomeView = ({ overviewData, students }) => {
         };
     });
 
+    const recentStudents = students.map((student) => {
+        return {
+            studentName: student.studentName,
+            studentClass: student.academicRecords.class,
+        };
+    });
+
     return (
         <React.Fragment>
             <main className={styles.homeViewMain}>
@@ -34,7 +41,7 @@ const HomeView = ({ overviewData, students }) => {
                     <UnpaidStudent unpaidStudents={unpaidData}/>
                 </div>
             </main>
-            <RightMenu/>
+            <RightMenu recentStudents={recentStudents}/>
         </React.Fragment>
     );
 }
