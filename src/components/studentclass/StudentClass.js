@@ -4,7 +4,7 @@ import User from '../../assets/icons/shared/User.svg';
 
 const StudentClass = (props) => {
     return (
-        <article className={styles.article}>
+        <article { ...{ 'data-studentClass': props.studentClass} } className={styles.article}>
             <figure>
                 <img src={User} alt="user icon"/>
             </figure>

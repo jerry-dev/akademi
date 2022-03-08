@@ -32,3 +32,15 @@
     font-size: var(--heading-size-5);
     font-weight: 600;
 }
+
+.article[data-studentClass="VII A"] > figure {
+    background-color: var(--color-2);
+}
+
+.article[data-studentClass="VII B"] > figure {
+    background-color: var(--color-3);
+}
+
+.article[data-studentClass="VII C"] > figure {
+    background-color: var(--color-1);
+}
