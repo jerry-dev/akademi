@@ -8,7 +8,7 @@ const RecentStudents = (props) => {
     let bucketsContainer = {};
     const maxDocsPerBucket = 5;
     let index = 0;
-    const [bucketBeingShown, setBucketBeingShown] = React.useState(1);
+    const [bucketsBeingShown, setBucketsBeingShown] = React.useState([1]);
 
 
     for (let i = 1; i < props.recentStudents.length; i++) {
@@ -23,7 +23,16 @@ const RecentStudents = (props) => {
         }
     }
 
-    const students = bucketsContainer[bucketBeingShown].map((student) => {
+    const bucketsToDisplayed = [];
+    for (let i = 0; i < Object.keys(bucketsContainer).length; i++) {
+        if (bucketsBeingShown.includes(i)) {
+            for (let j = 0; j < bucketsContainer[i].length; j++) {
+                bucketsToDisplayed[bucketsToDisplayed.length] = bucketsContainer[i][j];
+            }
+        }
+    }
+
+    const students = bucketsToDisplayed.map((student) => {
         return <li>
             <RecentStudentListElement
                 studentName={student.studentName}
@@ -31,6 +40,19 @@ const RecentStudents = (props) => {
                 studentPhoto={student.studentPhoto}/>
         </li>
     });
+
+    const viewMore = (event) => {
+        let bucketsToShow = JSON.parse(JSON.stringify(bucketsBeingShown));
+        const nextBucket = bucketsBeingShown[bucketsBeingShown.length-1] + 1;
+
+        if (bucketsContainer[nextBucket]) {
+            bucketsToShow[bucketsToShow.length] = nextBucket;
+
+            setBucketsBeingShown(bucketsToShow);
+        } else {
+            console.error(`**There are no more recent students to show**`);
+        }
+    }
 
     return (
         <article className={styles.recentStudent}>
@@ -44,7 +66,7 @@ const RecentStudents = (props) => {
                 </button>
             </header>
             <ul>{students}</ul>
-            <button type="button" className={styles.loadMore}>
+            <button type="button" className={styles.loadMore} onClick={viewMore}>
                 <p>View More</p>
             </button>
         </article>
