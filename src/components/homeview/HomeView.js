@@ -20,11 +20,13 @@ const HomeView = ({ overviewData, students }) => {
         };
     });
 
-    const recentStudents = students.map((student) => {
-        return {
-            studentName: student.studentName,
-            studentClass: student.academicRecords.class,
-        };
+    const recentStudents = students.map((student, index) => {
+        if (index > students.length / 2) {
+            return {
+                studentName: student.studentName,
+                studentClass: student.academicRecords.class,
+            };
+        }        
     });
 
     return (
