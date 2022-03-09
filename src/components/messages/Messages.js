@@ -3,33 +3,62 @@ import styles from './messages.module.css';
 import SectionTitle from '../sectiontitle/SectionTitle.js';
 import MessageListElement from '../messagelistelement/MessageListElement.js';
 
-// Takes in the number of recent students
-// A list of the recent students
-// Each student has its avatar, full name, email, and class
-// The messages previews are 26 characters max
-const messages = [
-    <li>
-        <MessageListElement senderName="Samantha William" messagePreview="Lorem ipsum dolor sit amet..." sentTime="12:45 PM"/>
-    </li>,
-    <li>
-        <MessageListElement senderName="Tony Soap" messagePreview="Lorem ipsum dolor sit amet..." sentTime="12:45 PM"/>
-    </li>,
-    <li>
-        <MessageListElement senderName="Jordan Nico" messagePreview="Lorem ipsum dolor sit amet..." sentTime="12:45 PM"/>
-    </li>,
-    <li>
-        <MessageListElement senderName="Nadila Adja" messagePreview="Lorem ipsum dolor sit amet..." sentTime="12:45 PM"/>
-    </li>
-];
-
 const Messages = (props) => {
+    let bucketsContainer = {};
+    const maxDocsPerBucket = 5;
+    let index = 0;
+    const [bucketsBeingShown, setBucketsBeingShown] = React.useState([1]);
+
+    for (let i = 1; i < props.studentMessages.length; i++) {
+        for (let k = 0; k < maxDocsPerBucket; k++) {
+            if (props.studentMessages[index]) {
+                if (!Array.isArray(bucketsContainer[i])) {
+                    bucketsContainer[i] = [];
+                }
+                bucketsContainer[i].push(props.studentMessages[index]);
+                index++;
+            }
+        }
+    }
+
+    const bucketsToDisplayed = [];
+    for (let i = 1; i <= Object.keys(bucketsContainer).length; i++) {
+        if (bucketsBeingShown.includes(i)) {
+            for (let j = 0; j < bucketsContainer[i].length; j++) {
+                bucketsToDisplayed[bucketsToDisplayed.length] = bucketsContainer[i][j];
+            }
+        }
+    }
+
+    const messages = bucketsToDisplayed.map((instance) => {
+        return <li>
+            <MessageListElement
+                profilePhoto={instance.profilePhoto}
+                senderName={instance.studentName}
+                messagePreview={instance.incomingMessages[0]}
+                sentTime={instance.latestMessageTimeStamp}/>
+            </li>
+    });
+
+    const viewMore = () => {
+        let bucketsToShow = JSON.parse(JSON.stringify(bucketsBeingShown));
+        const nextBucket = bucketsBeingShown[bucketsBeingShown.length-1] + 1;
+
+        if (bucketsContainer[nextBucket]) {
+            bucketsToShow[bucketsToShow.length] = nextBucket;
+            setBucketsBeingShown(bucketsToShow);
+        } else {
+            console.error(`**There are no more messages to show**`);
+        }
+    }
+
     return (
         <article className={styles.messages}>
             <header>
                 <SectionTitle title="Messages"/>
             </header>
             <ul>{messages}</ul>
-            <button type="button" className={styles.loadMore}>
+            <button type="button" className={styles.loadMore} onClick={viewMore}>
                 <p>View More</p>
             </button>
         </article>
