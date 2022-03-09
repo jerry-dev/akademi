@@ -41,7 +41,7 @@ const RecentStudents = (props) => {
         </li>
     });
 
-    const viewMore = (event) => {
+    const viewMore = () => {
         let bucketsToShow = JSON.parse(JSON.stringify(bucketsBeingShown));
         const nextBucket = bucketsBeingShown[bucketsBeingShown.length-1] + 1;
 
