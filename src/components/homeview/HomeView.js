@@ -9,7 +9,7 @@ import UnpaidStudent from '../unpaidstudent/UnpaidStudent.js';
 import RightMenu from '../rightmenu/RightMenu.js';
 import { connect } from 'react-redux';
 
-const HomeView = ({ overviewData, students }) => {
+const HomeView = ({ overviewData, students, studentMessages }) => {
     const unpaidData = students.map((student) => {
         return {
             studentFullName: student.studentName,
@@ -33,6 +33,23 @@ const HomeView = ({ overviewData, students }) => {
         };
     });
 
+    studentMessages.forEach((instance) => {
+        let fakeTimeStamp = new Date(
+            Date.UTC(
+                new Date().getFullYear(),
+                new Date().getMonth(),
+                new Date().getDate(),
+                new Date().getUTCHours(),
+                Math.floor(Math.random() * 59)
+            )
+        ).toLocaleString().replace(/^.*, /, "");
+    
+        fakeTimeStamp = fakeTimeStamp.replace(/:00 /, " ");
+
+        instance.latestMessageTimeStamp = fakeTimeStamp;
+    });
+
+
     return (
         <React.Fragment>
             <main className={styles.homeViewMain}>
@@ -47,13 +64,13 @@ const HomeView = ({ overviewData, students }) => {
                     <UnpaidStudent unpaidStudents={unpaidData}/>
                 </div>
             </main>
-            <RightMenu recentStudents={recentStudents}/>
+            <RightMenu studentMessages={studentMessages} recentStudents={recentStudents}/>
         </React.Fragment>
     );
 }
 
 const mapStateToProps = (state) => {
-    return { overviewData: state.overview, students: state.students };
+    return { overviewData: state.overview, studentMessages: state.messages, students: state.students };
 };
 
 export default connect(mapStateToProps)(HomeView);
