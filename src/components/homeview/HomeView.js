@@ -29,6 +29,7 @@ const HomeView = ({ overviewData, students }) => {
         return {
             studentName: student.studentName,
             studentClass: student.academicRecords.class,
+            studentPhoto: student.bio.profilePhoto
         };
     });
 
