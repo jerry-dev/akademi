@@ -32,6 +32,14 @@ const students = [
 ];
 
 const RecentStudents = (props) => {
+    // const students = props.recentStudents.map((student) => {
+    //     return <li>
+    //         <RecentStudentListElement
+    //             studentName={student.studentName}
+    //             studentClass={student.studentClass}/>
+    //     </li>
+    // });
+    console.log('props:', props)
     return (
         <article className={styles.recentStudent}>
             <header>

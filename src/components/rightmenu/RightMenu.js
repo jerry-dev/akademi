@@ -11,7 +11,7 @@ const RightMenu = (props) => {
         <aside className={styles.rightMenu}>
             <div className={styles.rightMenuInnerContainer}>
                 <MenuHeader/>
-                <RecentStudents/>
+                <RecentStudents recentStudents={props.recentStudents}/>
                 <Messages/>
                 <CurrentFoodsMenu/>
             </div>
