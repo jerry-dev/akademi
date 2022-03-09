@@ -27,7 +27,8 @@ const RecentStudents = (props) => {
         return <li>
             <RecentStudentListElement
                 studentName={student.studentName}
-                studentClass={student.studentClass}/>
+                studentClass={student.studentClass}
+                studentPhoto={student.studentPhoto}/>
         </li>
     });
 
