@@ -13,7 +13,7 @@ const RightMenu = (props) => {
                 <MenuHeader/>
                 {/* The data is coming from homeview.js */}
                 <RecentStudents recentStudents={props.recentStudents}/>
-                <Messages/>
+                <Messages studentMessages={props.studentMessages}/>
                 <CurrentFoodsMenu/>
             </div>
         </aside>
