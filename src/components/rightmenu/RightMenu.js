@@ -11,6 +11,7 @@ const RightMenu = (props) => {
         <aside className={styles.rightMenu}>
             <div className={styles.rightMenuInnerContainer}>
                 <MenuHeader/>
+                {/* The data is coming from homeview.js */}
                 <RecentStudents recentStudents={props.recentStudents}/>
                 <Messages/>
                 <CurrentFoodsMenu/>

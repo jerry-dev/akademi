@@ -4,48 +4,39 @@ import SectionTitle from '../sectiontitle/SectionTitle.js';
 import Plus from '../../assets/icons/shared/plus.svg';
 import RecentStudentListElement from '../recentstudentlistelement/RecentStudentListElement.js';
 
-// Takes in the number of recent students
-// A list of the recent students
-// Each student has its avatar, full name, email, and class
-const numberOfStudents = 456;
-const students = [
-    <li><RecentStudentListElement
-        studentName="Samantha William"
-        studentClass="Class VII A"/>
-    </li>,
-    <li><RecentStudentListElement
-        studentName="Tony Soap"
-        studentClass="Class VII A"/>
-    </li>,
-    <li><RecentStudentListElement
-        studentName="Karen Hope"
-        studentClass="Class VII A"/>
-    </li>,
-    <li><RecentStudentListElement
-        studentName="Jordan Nico"
-        studentClass="Class VII B"/>
-    </li>,
-    <li><RecentStudentListElement
-        studentName="Nadila Adja"
-        studentClass="Class VII B"/>
-    </li>
-];
-
 const RecentStudents = (props) => {
-    // const students = props.recentStudents.map((student) => {
-    //     return <li>
-    //         <RecentStudentListElement
-    //             studentName={student.studentName}
-    //             studentClass={student.studentClass}/>
-    //     </li>
-    // });
-    console.log('props:', props)
+    let bucketsContainer = {};
+    const maxDocsPerBucket = 5;
+    let index = 0;
+    const [bucketBeingShown, setBucketBeingShown] = React.useState(1);
+
+
+    for (let i = 1; i < props.recentStudents.length; i++) {
+        for (let k = 0; k < maxDocsPerBucket; k++) {
+            if (props.recentStudents[index]) {
+                if (!Array.isArray(bucketsContainer[i])) {
+                    bucketsContainer[i] = [];
+                }
+                bucketsContainer[i].push(props.recentStudents[index]);
+                index++;
+            }
+        }
+    }
+
+    const students = bucketsContainer[bucketBeingShown].map((student) => {
+        return <li>
+            <RecentStudentListElement
+                studentName={student.studentName}
+                studentClass={student.studentClass}/>
+        </li>
+    });
+
     return (
         <article className={styles.recentStudent}>
             <header>
                 <div>
                     <SectionTitle title="Recent Students"/>
-                    <p>You have <span>{numberOfStudents}</span> students</p>
+                    <p>You have <span>{props.recentStudents.length}</span> students</p>
                 </div>
                 <button type="button">
                     <img src={Plus} alt="Plus symbol"/>
