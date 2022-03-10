@@ -51,7 +51,7 @@ const HomeView = ({ overviewData, students, studentMessages, menuItems }) => {
 
     const currentFoodsItems = menuItems.map((item)=> {
         return {
-            menuImage: item.menuImage,
+            itemId: item.id,
             menuItemName: item.itemName,
             menuItemPreviewDetail: item.description
         }
