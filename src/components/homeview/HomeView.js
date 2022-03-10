@@ -9,7 +9,7 @@ import UnpaidStudent from '../unpaidstudent/UnpaidStudent.js';
 import RightMenu from '../rightmenu/RightMenu.js';
 import { connect } from 'react-redux';
 
-const HomeView = ({ overviewData, students, studentMessages }) => {
+const HomeView = ({ overviewData, students, studentMessages, menuItems }) => {
     const unpaidData = students.map((student) => {
         return {
             studentFullName: student.studentName,
@@ -49,6 +49,13 @@ const HomeView = ({ overviewData, students, studentMessages }) => {
         instance.latestMessageTimeStamp = fakeTimeStamp;
     });
 
+    const currentFoodsItems = menuItems.map((item)=> {
+        return {
+            menuImage: item.menuImage,
+            menuItemName: item.itemName,
+            menuItemPreviewDetail: item.description
+        }
+    });
 
     return (
         <React.Fragment>
@@ -64,7 +71,10 @@ const HomeView = ({ overviewData, students, studentMessages }) => {
                     <UnpaidStudent unpaidStudents={unpaidData}/>
                 </div>
             </main>
-            <RightMenu studentMessages={studentMessages} recentStudents={recentStudents}/>
+            <RightMenu
+                studentMessages={studentMessages}
+                recentStudents={recentStudents}
+                currentFoodsItems={currentFoodsItems}/>
         </React.Fragment>
     );
 }
