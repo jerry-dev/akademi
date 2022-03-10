@@ -33,7 +33,7 @@ const CurrentFoodsMenu = (props) => {
     const menuItems = bucketsToDisplayed.map((instance) => {
         return <li>
             <CurrentFoodsItem
-                menuImage={instance.menuImage}
+                itemId={instance.itemId}
                 menuItemName={instance.menuItemName}
                 menuItemPreviewDetail={instance.menuItemPreviewDetail}/>
             </li>
