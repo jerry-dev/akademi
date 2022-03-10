@@ -5,7 +5,7 @@ import MessageListElement from '../messagelistelement/MessageListElement.js';
 
 const Messages = (props) => {
     let bucketsContainer = {};
-    const maxDocsPerBucket = 5;
+    const maxDocsPerBucket = 4;
     let index = 0;
     const [bucketsBeingShown, setBucketsBeingShown] = React.useState([1]);
 
