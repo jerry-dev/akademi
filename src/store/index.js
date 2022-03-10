@@ -23899,8 +23899,8 @@ const initialState = {
             "studentName": "Thomas White",
             'incomingMessages' :['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum ut tristique et egestas.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi etiam dignissim diam quis enim lobortis. Interdum posuere lorem ipsum dolor sit.']
         }, {
-            "profilePhoto": "https://randomuser.me/api/portraits/men/35.jpg",
-            "studentName": "Kevin Richardson",
+            "profilePhoto": "https://randomuser.me/api/portraits/women/37.jpg",
+            "studentName": "Alexis Müller",
             'incomingMessages' :['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum ut tristique et egestas.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi etiam dignissim diam quis enim lobortis. Interdum posuere lorem ipsum dolor sit.']
         }, {
             "profilePhoto": "https://randomuser.me/api/portraits/men/36.jpg",
