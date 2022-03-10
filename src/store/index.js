@@ -8,6 +8,64 @@ const initialState = {
         { "title": "events", "stat": "40" },
         { "title": "foods", "stat": "32,000" },
     ],
+    food: [
+        {
+            "itemName": "Beef Steak",
+            "ingredients": [],
+            "menuImage": "./assets/images/menuItems/beefsteak.jpg",
+            "spotlightImage": "./assets/images/foodDetails/beefsteak.jpg",
+            "description": "",
+            "nutrition": []
+        },
+        {
+            "itemName": "Pancakes With Honey",
+            "ingredients": [],
+            "menuImage": "./assets/images/menuItems/pancakes.jpg",
+            "spotlightImage": "./assets/images/foodDetails/pancakes.jpg",
+            "description": "",
+            "nutrition": []
+        },
+        {
+            "itemName": "Japanese Beef Raman",
+            "ingredients": [],
+            "menuImage": "./assets/images/menuItems/raman.jpg",
+            "spotlightImage": "./assets/images/foodDetails/raman.jpg",
+            "description": "",
+            "nutrition": []
+        },
+        {
+            "itemName": "Double Patty Burger With Special Sauce",
+            "ingredients": [],
+            "menuImage": "./assets/images/menuItems/burger.jpg",
+            "spotlightImage": "./assets/images/foodDetails/burger.jpg",
+            "description": "",
+            "nutrition": []
+        },
+        {
+            "itemName": "Pepperoni Pan Pizza",
+            "ingredients": [],
+            "menuImage": "./assets/images/menuItems/pizza.jpg",
+            "spotlightImage": "./assets/images/foodDetails/pizza.jpg",
+            "description": "",
+            "nutrition": []
+        },
+        {
+            "itemName": "Grilled Shrimp Salad",
+            "ingredients": [],
+            "menuImage": "./assets/images/menuItems/shrimpsalad.jpg",
+            "spotlightImage": "./assets/images/foodDetails/shrimpsalad.jpg",
+            "description": "",
+            "nutrition": []
+        },
+        {
+            "itemName": "Super Green Smoothie",
+            "ingredients": ["green apple", "spinach", "cucumber", "ginger"],
+            "menuImage": "./assets/images/menuItems/smoothie.jpg",
+            "spotlightImage": "./assets/images/foodDetails/smoothie.jpg",
+            "description": "",
+            "nutrition": []
+        }
+    ],
     students: [{
             "contact": {
                 "email": "nicholas.martinez@email.com",
