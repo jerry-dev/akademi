@@ -12,6 +12,7 @@ const initialState = {
         {
             "itemName": "Beef Steak",
             "ingredients": [],
+            "id": 1,
             "menuImage": "./assets/images/menuItems/beefsteak.jpg",
             "spotlightImage": "./assets/images/foodDetails/beefsteak.jpg",
             "description": "",
@@ -20,6 +21,7 @@ const initialState = {
         {
             "itemName": "Pancakes With Honey",
             "ingredients": [],
+            "id": 2,
             "menuImage": "./assets/images/menuItems/pancakes.jpg",
             "spotlightImage": "./assets/images/foodDetails/pancakes.jpg",
             "description": "",
@@ -28,6 +30,7 @@ const initialState = {
         {
             "itemName": "Japanese Beef Raman",
             "ingredients": [],
+            "id": 3,
             "menuImage": "./assets/images/menuItems/raman.jpg",
             "spotlightImage": "./assets/images/foodDetails/raman.jpg",
             "description": "",
@@ -36,6 +39,7 @@ const initialState = {
         {
             "itemName": "Double Patty Burger With Special Sauce",
             "ingredients": [],
+            "id": 4,
             "menuImage": "./assets/images/menuItems/burger.jpg",
             "spotlightImage": "./assets/images/foodDetails/burger.jpg",
             "description": "",
@@ -44,6 +48,7 @@ const initialState = {
         {
             "itemName": "Pepperoni Pan Pizza",
             "ingredients": [],
+            "id": 5,
             "menuImage": "./assets/images/menuItems/pizza.jpg",
             "spotlightImage": "./assets/images/foodDetails/pizza.jpg",
             "description": "",
@@ -52,6 +57,7 @@ const initialState = {
         {
             "itemName": "Grilled Shrimp Salad",
             "ingredients": [],
+            "id": 6,
             "menuImage": "./assets/images/menuItems/shrimpsalad.jpg",
             "spotlightImage": "./assets/images/foodDetails/shrimpsalad.jpg",
             "description": "",
@@ -60,6 +66,7 @@ const initialState = {
         {
             "itemName": "Super Green Smoothie",
             "ingredients": ["green apple", "spinach", "cucumber", "ginger"],
+            "id": 7,
             "menuImage": "./assets/images/menuItems/smoothie.jpg",
             "spotlightImage": "./assets/images/foodDetails/smoothie.jpg",
             "description": "",
