@@ -70,7 +70,12 @@ const HomeView = ({ overviewData, students, studentMessages }) => {
 }
 
 const mapStateToProps = (state) => {
-    return { overviewData: state.overview, studentMessages: state.messages, students: state.students };
+    return {
+        overviewData: state.overview,
+        studentMessages: state.messages,
+        students: state.students,
+        menuItems: state.food
+    };
 };
 
 export default connect(mapStateToProps)(HomeView);
