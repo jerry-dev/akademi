@@ -2,24 +2,12 @@ import React from 'react';
 import styles from './messages.module.css';
 import SectionTitle from '../sectiontitle/SectionTitle.js';
 import MessageListElement from '../messagelistelement/MessageListElement.js';
+import dataBucketCreator from '../../utils/dataBucketCreator.js';
 
 const Messages = (props) => {
-    let bucketsContainer = {};
-    const maxDocsPerBucket = 4;
-    let index = 0;
     const [bucketsBeingShown, setBucketsBeingShown] = React.useState([1]);
 
-    for (let i = 1; i < props.studentMessages.length; i++) {
-        for (let k = 0; k < maxDocsPerBucket; k++) {
-            if (props.studentMessages[index]) {
-                if (!Array.isArray(bucketsContainer[i])) {
-                    bucketsContainer[i] = [];
-                }
-                bucketsContainer[i].push(props.studentMessages[index]);
-                index++;
-            }
-        }
-    }
+    const bucketsContainer = dataBucketCreator(props.studentMessages, 4);
 
     const bucketsToDisplayed = [];
     for (let i = 1; i <= Object.keys(bucketsContainer).length; i++) {
