@@ -3,28 +3,12 @@ import styles from './unpaidstudent.module.css';
 import SectionTitle from '../sectiontitle/SectionTitle.js';
 import UnpaidStudentDetail from '../unpaidstudentdetail/UnpaidStudentDetail.js';
 import Paginator from '../paginator/Paginator.js';
+import dataBucketCreator from '../../utils/dataBucketCreator.js';
 
 const UnpaidStudent = (props) => {
     const [ bucketBeingShown, setBucketBeingShown ] = React.useState(1);
-
     const maxDocPerPage = 5;
-    const bucketsContainer = {};
-    let index = 0;
-
-    // Seperating the data into "buckets"
-    // The properties of the "bucketsContainer" object are the actual buckets
-    // The max size of each bucket is equal to maxDocPerPage
-    for (let i = 1; i <= props.unpaidStudents.length; i++) {
-        for (let j = 0; j < maxDocPerPage; j++) {
-            if (props.unpaidStudents[index]) {
-                if (!Array.isArray(bucketsContainer[i])) {
-                    bucketsContainer[i] = [];
-                }
-                bucketsContainer[i].push(props.unpaidStudents[index]);
-                index++;
-            }
-        }
-    }
+    const bucketsContainer = dataBucketCreator(props.unpaidStudents, maxDocPerPage);
 
     const circleNavs = (event) => {
         const bucket = Number(event.target.querySelector('output').innerText);
