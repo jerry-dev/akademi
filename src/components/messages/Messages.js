@@ -1,25 +1,15 @@
 import React from 'react';
 import styles from './messages.module.css';
 import SectionTitle from '../sectiontitle/SectionTitle.js';
-import MessageListElement from '../messagelistelement/MessageListElement.js';
 import dataBucketCreator from '../../utils/dataBucketCreator.js';
 import getBucketToBeDisplayed from '../../utils/getBucketToBeDisplayed.js';
+import getMessages from './getMessages.js';
 
 const Messages = (props) => {
-    const [bucketsBeingShown, setBucketsBeingShown] = React.useState([1]);
-
+    const [ bucketsBeingShown, setBucketsBeingShown ] = React.useState([1]);
     const bucketsContainer = dataBucketCreator(props.studentMessages, 4);
     const bucketsToDisplay = getBucketToBeDisplayed(bucketsContainer, bucketsBeingShown);
-
-    const messages = bucketsToDisplay.map((instance) => {
-        return <li>
-            <MessageListElement
-                profilePhoto={instance.profilePhoto}
-                senderName={instance.studentName}
-                messagePreview={instance.incomingMessages[0]}
-                sentTime={instance.latestMessageTimeStamp}/>
-            </li>
-    });
+    const messages = getMessages(bucketsToDisplay);
 
     const viewMore = () => {
         let bucketsToShow = JSON.parse(JSON.stringify(bucketsBeingShown));
