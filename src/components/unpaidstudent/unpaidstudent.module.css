@@ -44,3 +44,80 @@
 .unpaidStudent footer small span {
     color: rgba(54, 59, 100, 1)
 }
+
+/* Animations */
+.unpaidStudent ul li {
+    animation-iteration-count: 1;
+    animation-direction: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.unpaidStudent ul li:nth-child(1) {
+    animation-duration: .4s;
+    animation-name: appearFromBottom1;
+}
+
+@keyframes appearFromBottom1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.unpaidStudent ul li:nth-child(2) {
+    animation-duration: .6s;
+    animation-name: appearFromBottom2;
+}
+
+@keyframes appearFromBottom2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.unpaidStudent ul li:nth-child(3) {
+    animation-duration: .8s;
+    animation-name: appearFromBottom3;
+}
+
+@keyframes appearFromBottom3 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.unpaidStudent ul li:nth-child(4) {
+    animation-duration: 1s;
+    animation-name: appearFromBottom4;
+}
+
+@keyframes appearFromBottom4 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.unpaidStudent ul li:nth-child(5) {
+    animation-duration: 1.2s;
+    animation-name: appearFromBottom5;
+}
+
+@keyframes appearFromBottom5 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
