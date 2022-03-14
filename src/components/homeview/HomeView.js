@@ -8,17 +8,10 @@ import SchoolFinance from '../schoolfinance/SchoolFinance.js';
 import UnpaidStudent from '../unpaidstudent/UnpaidStudent.js';
 import RightMenu from '../rightmenu/RightMenu.js';
 import { connect } from 'react-redux';
+import getUnpaidStudentData from './getUnpaidStudentData.js';
 
 const HomeView = ({ overviewData, students, studentMessages, menuItems }) => {
-    const unpaidData = students.map((student) => {
-        return {
-            studentFullName: student.studentName,
-            studentId: student.id,
-            studentClass: student.academicRecords.class,
-            studentDebt: student.financialRecords.debt,
-            studentPhoto: student.bio.profilePhoto
-        };
-    });
+    const unpaidData = getUnpaidStudentData(students);
 
     let halfTheStudents = [];
     for (let i = students.length / 2; i < students.length; i++) {
