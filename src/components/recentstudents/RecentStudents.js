@@ -4,21 +4,14 @@ import SectionTitle from '../sectiontitle/SectionTitle.js';
 import Plus from '../../assets/icons/shared/plus.svg';
 import RecentStudentListElement from '../recentstudentlistelement/RecentStudentListElement.js';
 import dataBucketCreator from '../../utils/dataBucketCreator.js';
+import getBucketToBeDisplayed from '../../utils/getBucketToBeDisplayed.js';
 
 const RecentStudents = (props) => {
-    const [bucketsBeingShown, setBucketsBeingShown] = React.useState([1]);
+    const [ bucketsBeingShown, setBucketsBeingShown ] = React.useState([1]);
     const bucketsContainer = dataBucketCreator(props.recentStudents, 5);
+    const bucketsToDisplay = getBucketToBeDisplayed(bucketsContainer, bucketsBeingShown);
 
-    const bucketsToDisplayed = [];
-    for (let i = 0; i < Object.keys(bucketsContainer).length; i++) {
-        if (bucketsBeingShown.includes(i)) {
-            for (let j = 0; j < bucketsContainer[i].length; j++) {
-                bucketsToDisplayed[bucketsToDisplayed.length] = bucketsContainer[i][j];
-            }
-        }
-    }
-
-    const students = bucketsToDisplayed.map((student) => {
+    const students = bucketsToDisplay.map((student) => {
         return <li>
             <RecentStudentListElement
                 studentName={student.studentName}
