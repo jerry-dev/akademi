@@ -3,22 +3,15 @@ import styles from './messages.module.css';
 import SectionTitle from '../sectiontitle/SectionTitle.js';
 import MessageListElement from '../messagelistelement/MessageListElement.js';
 import dataBucketCreator from '../../utils/dataBucketCreator.js';
+import getBucketToBeDisplayed from '../../utils/getBucketToBeDisplayed.js';
 
 const Messages = (props) => {
     const [bucketsBeingShown, setBucketsBeingShown] = React.useState([1]);
 
     const bucketsContainer = dataBucketCreator(props.studentMessages, 4);
+    const bucketsToDisplay = getBucketToBeDisplayed(bucketsContainer, bucketsBeingShown);
 
-    const bucketsToDisplayed = [];
-    for (let i = 1; i <= Object.keys(bucketsContainer).length; i++) {
-        if (bucketsBeingShown.includes(i)) {
-            for (let j = 0; j < bucketsContainer[i].length; j++) {
-                bucketsToDisplayed[bucketsToDisplayed.length] = bucketsContainer[i][j];
-            }
-        }
-    }
-
-    const messages = bucketsToDisplayed.map((instance) => {
+    const messages = bucketsToDisplay.map((instance) => {
         return <li>
             <MessageListElement
                 profilePhoto={instance.profilePhoto}
