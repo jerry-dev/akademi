@@ -11,27 +11,12 @@ import { connect } from 'react-redux';
 import getUnpaidStudentData from './getUnpaidStudentData.js';
 import getRecentStudents from './getRecentStudents.js';
 import getCurrentFoodsItems from './getCurrentFoodsItems.js';
+import setFakeTimeStamps from './setFakeTimeStamps';
 
 const HomeView = ({ overviewData, students, studentMessages, menuItems }) => {
     const unpaidData = getUnpaidStudentData(students);
     const recentStudents = getRecentStudents(students);
-
-    studentMessages.forEach((instance) => {
-        let fakeTimeStamp = new Date(
-            Date.UTC(
-                new Date().getFullYear(),
-                new Date().getMonth(),
-                new Date().getDate(),
-                new Date().getUTCHours(),
-                Math.floor(Math.random() * 59)
-            )
-        ).toLocaleString().replace(/^.*, /, "");
-    
-        fakeTimeStamp = fakeTimeStamp.replace(/:00 /, " ");
-
-        instance.latestMessageTimeStamp = fakeTimeStamp;
-    });
-
+    setFakeTimeStamps(studentMessages);
     const currentFoodsItems = getCurrentFoodsItems(menuItems);
 
     return (
