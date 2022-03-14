@@ -3,25 +3,11 @@ import styles from './recentstudents.module.css';
 import SectionTitle from '../sectiontitle/SectionTitle.js';
 import Plus from '../../assets/icons/shared/plus.svg';
 import RecentStudentListElement from '../recentstudentlistelement/RecentStudentListElement.js';
+import dataBucketCreator from '../../utils/dataBucketCreator.js';
 
 const RecentStudents = (props) => {
-    let bucketsContainer = {};
-    const maxDocsPerBucket = 5;
-    let index = 0;
     const [bucketsBeingShown, setBucketsBeingShown] = React.useState([1]);
-
-
-    for (let i = 1; i < props.recentStudents.length; i++) {
-        for (let k = 0; k < maxDocsPerBucket; k++) {
-            if (props.recentStudents[index]) {
-                if (!Array.isArray(bucketsContainer[i])) {
-                    bucketsContainer[i] = [];
-                }
-                bucketsContainer[i].push(props.recentStudents[index]);
-                index++;
-            }
-        }
-    }
+    const bucketsContainer = dataBucketCreator(props.recentStudents, 5);
 
     const bucketsToDisplayed = [];
     for (let i = 0; i < Object.keys(bucketsContainer).length; i++) {
