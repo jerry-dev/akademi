@@ -1,24 +1,15 @@
 import React from 'react';
 import styles from './currentfoodsmenu.module.css';
 import SectionTitle from '../sectiontitle/SectionTitle.js';
-import CurrentFoodsItem from '../currentfoodsitem/CurrentFoodsItem.js';
 import dataBucketCreator from '../../utils/dataBucketCreator.js';
 import getBucketToBeDisplayed from '../../utils/getBucketToBeDisplayed.js';
+import getMenuItems from './getMenuItems.js';
 
 const CurrentFoodsMenu = (props) => {
-    const [bucketsBeingShown, setBucketsBeingShown] = React.useState([1]);
-
+    const [ bucketsBeingShown, setBucketsBeingShown ] = React.useState([1]);
     const bucketsContainer = dataBucketCreator(props.currentFoodsItems, 3);
     const bucketsToDisplay = getBucketToBeDisplayed(bucketsContainer, bucketsBeingShown);
-
-    const menuItems = bucketsToDisplay.map((instance) => {
-        return <li>
-            <CurrentFoodsItem
-                itemId={instance.itemId}
-                menuItemName={instance.menuItemName}
-                menuItemPreviewDetail={instance.menuItemPreviewDetail}/>
-            </li>
-    });
+    const menuItems = getMenuItems(bucketsToDisplay);
 
     const viewMore = () => {
         let bucketsToShow = JSON.parse(JSON.stringify(bucketsBeingShown));
