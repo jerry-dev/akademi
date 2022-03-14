@@ -2,24 +2,12 @@ import React from 'react';
 import styles from './currentfoodsmenu.module.css';
 import SectionTitle from '../sectiontitle/SectionTitle.js';
 import CurrentFoodsItem from '../currentfoodsitem/CurrentFoodsItem.js';
+import dataBucketCreator from '../../utils/dataBucketCreator.js';
 
 const CurrentFoodsMenu = (props) => {
-    let bucketsContainer = {};
-    const maxDocsPerBucket = 3;
-    let index = 0;
     const [bucketsBeingShown, setBucketsBeingShown] = React.useState([1]);
 
-    for (let i = 1; i < props.currentFoodsItems.length; i++) {
-        for (let k = 0; k < maxDocsPerBucket; k++) {
-            if (props.currentFoodsItems[index]) {
-                if (!Array.isArray(bucketsContainer[i])) {
-                    bucketsContainer[i] = [];
-                }
-                bucketsContainer[i].push(props.currentFoodsItems[index]);
-                index++;
-            }
-        }
-    }
+    const bucketsContainer = dataBucketCreator(props.currentFoodsItems, 3);
 
     const bucketsToDisplayed = [];
     for (let i = 1; i <= Object.keys(bucketsContainer).length; i++) {
