@@ -3,22 +3,15 @@ import styles from './currentfoodsmenu.module.css';
 import SectionTitle from '../sectiontitle/SectionTitle.js';
 import CurrentFoodsItem from '../currentfoodsitem/CurrentFoodsItem.js';
 import dataBucketCreator from '../../utils/dataBucketCreator.js';
+import getBucketToBeDisplayed from '../../utils/getBucketToBeDisplayed.js';
 
 const CurrentFoodsMenu = (props) => {
     const [bucketsBeingShown, setBucketsBeingShown] = React.useState([1]);
 
     const bucketsContainer = dataBucketCreator(props.currentFoodsItems, 3);
+    const bucketsToDisplay = getBucketToBeDisplayed(bucketsContainer, bucketsBeingShown);
 
-    const bucketsToDisplayed = [];
-    for (let i = 1; i <= Object.keys(bucketsContainer).length; i++) {
-        if (bucketsBeingShown.includes(i)) {
-            for (let j = 0; j < bucketsContainer[i].length; j++) {
-                bucketsToDisplayed[bucketsToDisplayed.length] = bucketsContainer[i][j];
-            }
-        }
-    }
-
-    const menuItems = bucketsToDisplayed.map((instance) => {
+    const menuItems = bucketsToDisplay.map((instance) => {
         return <li>
             <CurrentFoodsItem
                 itemId={instance.itemId}
