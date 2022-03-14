@@ -14,15 +14,7 @@ import getCurrentFoodsItems from './getCurrentFoodsItems.js';
 
 const HomeView = ({ overviewData, students, studentMessages, menuItems }) => {
     const unpaidData = getUnpaidStudentData(students);
-
-    // Faking the recent students by just plucking out half of the students
-    // Will add enrollment datas to the students data later
-    let halfTheStudents = [];
-    for (let i = students.length / 2; i < students.length; i++) {
-        halfTheStudents[halfTheStudents.length] = students[i];
-    }
-
-    const recentStudents = getRecentStudents(halfTheStudents);
+    const recentStudents = getRecentStudents(students);
 
     studentMessages.forEach((instance) => {
         let fakeTimeStamp = new Date(

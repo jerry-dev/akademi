@@ -1,9 +1,12 @@
-// At the moment the students data does not feature enrollment dates
-// Later I'll add said data, and will have to update this function
-// to only use data that's of a certain time frame
-
 const getRecentStudents = (students) => {
-    return students.map((student) => {
+    // Faking the recent students by just plucking out half of the students
+    // Will add enrollment datas to the students data later
+    let halfTheStudents = [];
+    for (let i = students.length / 2; i < students.length; i++) {
+        halfTheStudents[halfTheStudents.length] = students[i];
+    }
+
+    return halfTheStudents.map((student) => {
         return {
             studentName: student.studentName,
             studentClass: student.academicRecords.class,
