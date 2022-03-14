@@ -9,22 +9,19 @@ import UnpaidStudent from '../unpaidstudent/UnpaidStudent.js';
 import RightMenu from '../rightmenu/RightMenu.js';
 import { connect } from 'react-redux';
 import getUnpaidStudentData from './getUnpaidStudentData.js';
+import getRecentStudents from './getRecentStudents.js';
 
 const HomeView = ({ overviewData, students, studentMessages, menuItems }) => {
     const unpaidData = getUnpaidStudentData(students);
 
+    // Faking the recent students by just plucking out half of the students
+    // Will add enrollment datas to the students data later
     let halfTheStudents = [];
     for (let i = students.length / 2; i < students.length; i++) {
         halfTheStudents[halfTheStudents.length] = students[i];
     }
 
-    const recentStudents = halfTheStudents.map((student) => {
-        return {
-            studentName: student.studentName,
-            studentClass: student.academicRecords.class,
-            studentPhoto: student.bio.profilePhoto
-        };
-    });
+    const recentStudents = getRecentStudents(halfTheStudents);
 
     studentMessages.forEach((instance) => {
         let fakeTimeStamp = new Date(
