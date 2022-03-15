@@ -73,6 +73,137 @@ const initialState = {
             "nutrition": []
         }
     ],
+    events: [{
+        "0": [
+            {
+                "type": "a", "date": 3
+            },
+            {
+                "type": "b", "date": 13
+            },
+            {
+                "type": "c", "date": 24
+            }
+        ],
+        "1": [
+            {
+                "type": "a", "date": 9
+            },
+            {
+                "type": "b", "date": 18
+            },
+            {
+                "type": "c", "date": 28
+            }
+        ],
+        "2": [
+            {
+                "type": "a", "date": 8
+            },
+            {
+                "type": "b", "date": 19
+            },
+            {
+                "type": "c", "date": 29
+            }
+        ],
+        "3": [
+            {
+                "type": "a", "date": 2
+            },
+            {
+                "type": "b", "date": 16
+            },
+            {
+                "type": "c", "date": 27
+            }
+        ],
+        "4": [
+            {
+                "type": "a", "date": 6
+            },
+            {
+                "type": "b", "date": 17
+            },
+            {
+                "type": "c", "date": 31
+            }
+        ],
+        "5": [
+            {
+                "type": "a", "date": 10
+            },
+            {
+                "type": "b", "date": 20
+            },
+            {
+                "type": "c", "date": 28
+            }
+        ],
+        "6": [
+            {
+                "type": "a", "date": 15
+            },
+            {
+                "type": "b", "date": 30
+            }
+        ],
+        "7": [
+            {
+                "type": "a", "date": 1
+            },
+            {
+                "type": "b", "date": 20
+            },
+            {
+                "type": "c", "date": 27
+            }
+        ],
+        "8": [
+            {
+                "type": "a", "date": 3
+            },
+            {
+                "type": "b", "date": 8
+            },
+            {
+                "type": "c", "date": 17
+            }
+        ],
+        "9": [
+            {
+                "type": "a", "date": 11
+            },
+            {
+                "type": "b", "date": 21
+            },
+            {
+                "type": "c", "date": 28
+            }
+        ],
+        "10": [
+            {
+                "type": "a", "date": 2
+            },
+            {
+                "type": "b", "date": 14
+            },
+            {
+                "type": "c", "date": 29
+            }
+        ],
+        "11": [
+            {
+                "type": "a", "date": 12
+            },
+            {
+                "type": "b", "date": 19
+            },
+            {
+                "type": "c", "date": 30
+            }
+        ]
+    }],
     students: [{
             "contact": {
                 "email": "nicholas.martinez@email.com",
