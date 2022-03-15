@@ -13,7 +13,7 @@ import getRecentStudents from './getRecentStudents.js';
 import getCurrentFoodsItems from './getCurrentFoodsItems.js';
 import setFakeTimeStamps from './setFakeTimeStamps';
 
-const HomeView = ({ overviewData, students, studentMessages, menuItems }) => {
+const HomeView = ({ overviewData, students, studentMessages, menuItems, schoolEvents }) => {
     const unpaidData = getUnpaidStudentData(students);
     const recentStudents = getRecentStudents(students);
     setFakeTimeStamps(studentMessages);
@@ -28,7 +28,7 @@ const HomeView = ({ overviewData, students, studentMessages, menuItems }) => {
                     </header>                
                     <Overview metricsData={overviewData}/>
                     <SchoolPerformance/>
-                    <SchoolCalendar/>
+                    <SchoolCalendar schoolEvents={schoolEvents}/>
                     <SchoolFinance/>
                     <UnpaidStudent unpaidStudents={unpaidData}/>
                 </div>
@@ -46,7 +46,8 @@ const mapStateToProps = (state) => {
         overviewData: state.overview,
         studentMessages: state.messages,
         students: state.students,
-        menuItems: state.food
+        menuItems: state.food,
+        schoolEvents: state.events
     };
 };
 
