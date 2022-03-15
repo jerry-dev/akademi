@@ -1,4 +1,112 @@
 .schoolCalendar {
     grid-column: span 1;
     height: 35.125rem;
+    padding-top: 2rem;
+}
+
+.schoolCalendar > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 87.11538%;
+}
+
+.schoolCalendar > div > header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.schoolCalendar > div > header > h2 {
+    font-size: var(--heading-size-4);
+}
+
+.schoolCalendar > div > header > select {
+    appearance: none;
+    border: none;
+    color: var(--color-4);
+    cursor: pointer;
+    font-size: var(--font-size-1);
+    padding-right: 1.5rem; /*This padding prevents the long named months like sept from overlapping the image*/
+}
+
+.schoolCalendar > div > header > select:focus {
+    outline: none;
+}
+
+.schoolCalendar ul {
+    font-size: var(--heading-size-5);
+    list-style: none;
+}
+
+.schoolCalendar > .detailsContainer > .dayLabels {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8125rem;
+}
+
+.schoolCalendar > .detailsContainer > .dayLabels li {
+    align-items: center;
+    color: var(--color-11);
+    display: flex;
+    height: 2.9375rem;
+    justify-content: center;;
+    width: 14.2857%;
+}
+
+.schoolCalendar > .detailsContainer > .calendarBlocks {
+    display: grid;
+    grid-template-columns: repeat(7, 14.25438596%);
+}
+
+.schoolCalendar > .detailsContainer > .calendarBlocks li {
+    align-items: center;
+    border: 0.0625rem solid var(--color-9);
+    color: var(--color-4);
+    display: flex;
+    /* height: 4.625rem; */
+    /* Could not use the original value which is commented out */
+    /* The design features only 5 rows for the calendar when 6 is needed */
+    /* Using 80% of the original heights for the li helped squeeze in another row */
+    height: 3.7rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.schoolCalendar > .detailsContainer > .calendarBlocks li[data-thefirstisonasunday=true] {
+    color: var(--color-2);
+}
+
+.schoolCalendar > .detailsContainer > .calendarBlocks li[data-dayofweek="Sunday"] {
+    color: var(--color-2);
+}
+
+.schoolCalendar > .detailsContainer > .calendarBlocks li[data-isoutermonth=true] {
+    color: var(--color-11);
+}
+
+.schoolCalendar > .detailsContainer > .calendarBlocks li > label {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 64.86486%;
+    justify-content: center;
+    width: 73.846%;
+}
+
+.schoolCalendar > .detailsContainer > .calendarBlocks li[data-eventtype="a"] > label {
+    background-color: var(--color-1);
+    color: var(--color-8);
+}
+
+.schoolCalendar > .detailsContainer > .calendarBlocks li[data-eventtype="b"] > label {
+    background-color: var(--color-3);
+    color: var(--color-8);
+}
+
+.schoolCalendar > .detailsContainer > .calendarBlocks li[data-eventtype="c"] > label {
+    background-color: var(--color-2);
+    color: var(--color-8);
 }
