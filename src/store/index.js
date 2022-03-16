@@ -10,7 +10,7 @@ const initialState = {
     ],
     food: [
         {
-            "itemName": "Beef Steak",
+            "itemName": "Beef Steak with Fried Potato",
             "ingredients": [],
             "id": 1,
             "menuImage": "./assets/images/menuItems/beefsteak.jpg",
