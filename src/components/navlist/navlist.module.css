@@ -1,7 +1,7 @@
 .navlist {
     list-style: none;
     margin-left: auto;
-    width: 18.6875rem;
+    width: 86.66666%;
 }
 
 .navlist li {
@@ -9,8 +9,6 @@
     display: flex;
     height: 4.5rem;
     justify-content: center;
-
-    /* OUTLINE: 1PX SOLID GOLD; */
 }
 
 .navlist li:not(:last-child) {
