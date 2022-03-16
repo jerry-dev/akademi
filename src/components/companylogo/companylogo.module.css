@@ -18,3 +18,19 @@
     font-size: var(--heading-size-3);
     line-height: 3.375rem;
 }
+
+
+@media screen and (max-width: 1730px) {
+    .companyLogo {
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .companyLogo img {
+        margin-right: 0;
+    }
+    
+    .companyLogo h3 {
+        display: none;
+    }
+}
