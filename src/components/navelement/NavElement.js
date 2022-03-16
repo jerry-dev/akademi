@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 
 const NavElement = (props) => {
     const altValue = `${props.text} route icon`;
+    const idValue = props.text.replace('Latest ', '').toLowerCase();
 
     let location = useLocation();
     let isActive = {'data-isactive': false};
@@ -25,8 +26,8 @@ const NavElement = (props) => {
     return (
         <Link className={styles.navElement} {...isActive} to={props.path}>
             <span>
-                <img src={icon} alt={altValue}/>
-                {props.text}
+                <img id={idValue} src={icon} alt={altValue}/>
+                <label for={idValue}>{props.text}</label>
             </span>
         </Link>
     )
