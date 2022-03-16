@@ -10,7 +10,7 @@ const daysOfTheWeek = {
     '6': `Saturday`,
 }
 
-const getCalendarCells = (month) => {
+const getCalendarCells = (month, events) => {
     month = Number(month);
 
     const firstDayOfTheMonth = new Date(
@@ -44,6 +44,7 @@ const getCalendarCells = (month) => {
 
     const returnCalendarCell = (details) => {
         return <li
+            {...(details.eventType) ? {'data-eventtype': details.eventType} : null}
             {...{'data-isoutermonth': details.isOuterMonth}}
             {...{'data-isthefirstisonasunday': details.isTheFirstIsOnASunday}}
             {...{'data-dayofweek': details.dayOfWeek}}><label>{details.dayCellValue}</label>
@@ -57,6 +58,7 @@ const getCalendarCells = (month) => {
     let dayOfTheWeek = 0;
     let isTheFirstIsOnASunday = false;
     let isOuterMonth = true;
+    let eventType = null;
 
     let dateInjectionState = 'injectIngLastMonthDates';
     
@@ -80,6 +82,12 @@ const getCalendarCells = (month) => {
         if (dateInjectionState === 'injectIngSelectedMonthDates') {
             if (dayCellValue > lastDayOfTheMonth) {
                 dateInjectionState = 'injectIngNextMonthDates';
+            } else {
+                events.forEach((event) => {
+                    if (event.date === dayCellValue) {
+                        eventType = event.type;
+                    }
+                });
             }
         }
 
@@ -93,13 +101,15 @@ const getCalendarCells = (month) => {
             'dayCellValue': dayCellValue,
             'isOuterMonth': isOuterMonth,
             'isTheFirstIsOnASunday': isTheFirstIsOnASunday,
-            'dayOfWeek': daysOfTheWeek[dayOfTheWeek]
+            'dayOfWeek': daysOfTheWeek[dayOfTheWeek],
+            'eventType': eventType
         };
 
         dayCells[dayCells.length] = returnCalendarCell(details);
         dayCellValue++;
         if (isTheFirstIsOnASunday === true) isTheFirstIsOnASunday = false;
         (dayOfTheWeek === 6) ? dayOfTheWeek = 0 : dayOfTheWeek++;
+        eventType = null;
     }
     return dayCells;
 }

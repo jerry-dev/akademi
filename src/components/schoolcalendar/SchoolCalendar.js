@@ -5,9 +5,9 @@ import getCalendarCells from './getCalendarCells.js';
 import getOptions from './getOptions.js';
 import selectArrow from '../../assets/icons/shared/dropdown.svg';
 
-// Will pass event dates to this from the parent container
 const SchoolCalendar = (props) => {
     const [ selectedMonth, setSelectedMonth ] = React.useState(new Date().getMonth());
+    const selectedMonthsEvents = props.schoolEvents[0][selectedMonth];
 
     const selectArrowStyles = {backgroundImage: `url(${selectArrow})`, backgroundSize: "1.5rem 1.5rem", backgroundRepeat: "no-repeat", backgroundPosition: "right"}
     return (
@@ -31,8 +31,7 @@ const SchoolCalendar = (props) => {
                     <li>Sat</li>
                 </ul>
                 <ul className={styles.calendarBlocks}>
-                    {/* props.events will be passed to getCalendarCells for processing */}
-                    {getCalendarCells(selectedMonth)}
+                    {getCalendarCells(selectedMonth, selectedMonthsEvents)}
                 </ul>
             </div>
         </section>

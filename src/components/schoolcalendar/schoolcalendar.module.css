@@ -91,22 +91,45 @@
     align-items: center;
     border-radius: 50%;
     display: flex;
-    height: 64.86486%;
+    /* height: 64.86486%; */
+    height: 75%;
     justify-content: center;
-    width: 73.846%;
+    /* width: 73.846%; */
+    width: 75%;
 }
 
 .schoolCalendar > .detailsContainer > .calendarBlocks li[data-eventtype="a"] > label {
     background-color: var(--color-1);
     color: var(--color-8);
+
+    animation-name: growIn;
+    animation-iteration-count: 1;
+    animation-duration: var(--animation-duration-1);
 }
 
 .schoolCalendar > .detailsContainer > .calendarBlocks li[data-eventtype="b"] > label {
     background-color: var(--color-3);
     color: var(--color-8);
+
+    animation-name: growIn;
+    animation-iteration-count: 1;
+    animation-duration: var(--animation-duration-1);
 }
 
 .schoolCalendar > .detailsContainer > .calendarBlocks li[data-eventtype="c"] > label {
     background-color: var(--color-2);
     color: var(--color-8);
+
+    animation-name: growIn;
+    animation-iteration-count: 1;
+    animation-duration: var(--animation-duration-1);
+}
+
+@keyframes growIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
