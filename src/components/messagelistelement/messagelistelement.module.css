@@ -40,6 +40,9 @@
 .messageListElement > figure > figcaption > p {
     color: var(--color-11);
     font-size: var(--font-size-2);
+    overflow: clip;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     width: 100%;
 }
 
