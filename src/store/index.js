@@ -15,7 +15,7 @@ const initialState = {
             "id": 1,
             "menuImage": "./assets/images/menuItems/beefsteak.jpg",
             "spotlightImage": "./assets/images/foodDetails/beefsteak.jpg",
-            "description": "",
+            "description": "A very common and popular dish served in brasseries throughout Europe consisting of steak paired with French fries. It is considered by some to be the national dish of Belgium, which claims to be the place of its invention.",
             "nutrition": []
         },
         {
@@ -24,16 +24,16 @@ const initialState = {
             "id": 2,
             "menuImage": "./assets/images/menuItems/pancakes.jpg",
             "spotlightImage": "./assets/images/foodDetails/pancakes.jpg",
-            "description": "",
+            "description": "A flat cake, often thin and round, prepared from a starch-based batter that may contain eggs, milk and butter and cooked on a hot surface such as a griddle or frying pan, often frying with oil or butter. It is a type of batter bread.",
             "nutrition": []
         },
         {
-            "itemName": "Japanese Beef Raman",
+            "itemName": "Japanese Beef Ramen",
             "ingredients": [],
             "id": 3,
             "menuImage": "./assets/images/menuItems/raman.jpg",
             "spotlightImage": "./assets/images/foodDetails/raman.jpg",
-            "description": "",
+            "description": "A Japanese noodle soup. It consists of Chinese-style wheat noodles served in a meat or (occasionally) fish-based broth, often flavored with soy sauce or miso, and uses toppings such as sliced pork (叉焼, chāshū), nori (dried seaweed), menma, and scallions.",
             "nutrition": []
         },
         {
@@ -42,7 +42,7 @@ const initialState = {
             "id": 4,
             "menuImage": "./assets/images/menuItems/burger.jpg",
             "spotlightImage": "./assets/images/foodDetails/burger.jpg",
-            "description": "",
+            "description": "A double patty of ground meat, placed inside a sliced bun or bread roll, served with cheese, lettuce, tomato, onion, pickles, and 'special sauce'.",
             "nutrition": []
         },
         {
@@ -51,7 +51,7 @@ const initialState = {
             "id": 5,
             "menuImage": "./assets/images/menuItems/pizza.jpg",
             "spotlightImage": "./assets/images/foodDetails/pizza.jpg",
-            "description": "",
+            "description": "A dish of Italian origin, flat base of leavened wheat-based dough topped with pepperoni, which is then baked in a deep dish pan at a high temperature on a wood-fired oven.",
             "nutrition": []
         },
         {
@@ -60,7 +60,7 @@ const initialState = {
             "id": 6,
             "menuImage": "./assets/images/menuItems/shrimpsalad.jpg",
             "spotlightImage": "./assets/images/foodDetails/shrimpsalad.jpg",
-            "description": "",
+            "description": "A grilled shrimp salad with spring fresh basil, cherry tomatoes, shredded mozzarella cheese, croutons, sliced red onion, dressed with balsamic vinegar, olive oil, dry Italian seasoning, and large cloves.",
             "nutrition": []
         },
         {
@@ -69,7 +69,7 @@ const initialState = {
             "id": 7,
             "menuImage": "./assets/images/menuItems/smoothie.jpg",
             "spotlightImage": "./assets/images/foodDetails/smoothie.jpg",
-            "description": "",
+            "description": "A puréed drink made of green apples, garlic, cucumbers, spinach, and yogurt, served cold to the brim of a mason jar cup with an environmentally friendly non-plastic straw.",
             "nutrition": []
         }
     ],
