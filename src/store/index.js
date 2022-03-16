@@ -55,7 +55,7 @@ const initialState = {
             "nutrition": []
         },
         {
-            "itemName": "Grilled Shrimp Salad",
+            "itemName": "Grilled Shrimp Bruschetta Salad",
             "ingredients": [],
             "id": 6,
             "menuImage": "./assets/images/menuItems/shrimpsalad.jpg",
