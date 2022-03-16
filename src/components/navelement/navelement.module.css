@@ -5,7 +5,7 @@
     display: flex;
     font-size: var(--font-size-1);
     height: 4.5rem;
-    min-width: 100%;
+    width: 100%;
     text-decoration: none;
 }
 
@@ -31,4 +31,26 @@
 
 .navElement span {
     margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 1730px) {
+    .navElement {
+        border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    .navElement span {
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .navElement span img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navElement span label {
+        display: none;
+    }
 }

@@ -3,3 +3,10 @@
     width: 17.96875%;
     padding-top: 3.125rem;
 }
+
+@media screen and (max-width: 1730px) {
+    .aside {
+        min-width: 120px;
+        max-width: 120px;
+    }
+}
