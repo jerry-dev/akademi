@@ -68,3 +68,32 @@
         transform: scale(1);
     }
 }
+
+@media screen and (max-width: 1330px) {
+    .overviewMetric {
+        grid-column: span 1;
+        margin-left: auto;
+        margin-right: auto;
+        width: 13rem;
+    }
+
+    .overviewMetric picture {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .overviewMetric picture img {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .overviewMetric span {
+        text-align: end;
+        /* OUTLINE: 3PX SOLID BLUE; */
+    }
+
+    .overviewMetric span h5 {
+        font-size: var(--heading-size-4);
+        font-weight: normal;
+    }
+}

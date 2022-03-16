@@ -12,18 +12,12 @@
     width: 88.4259259%;
 }
 
-.testStat:nth-child(1) {
-    background-color: lightpink;
-}
-
-.testStat:nth-child(2) {
-    background-color: lightblue;
-}
-
-.testStat:nth-child(3) {
-    background-color: lightgreen;
-}
-
-.testStat:nth-child(4) {
-    background-color: lightskyblue;
+@media screen and (max-width: 1330px) {
+    .sectionCanvas > div {
+        display: grid;
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
 }
