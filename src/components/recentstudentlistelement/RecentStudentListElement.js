@@ -10,7 +10,7 @@ const RecentStudentListElement = (props) => {
                 <img src={props.studentPhoto} alt={altValue}/>
                 <figcaption>
                     <h6>{props.studentName}</h6>
-                    <small>{props.studentClass}</small>
+                    <small>Class {props.studentClass}</small>
                 </figcaption>
             </figure>
             <button type="button">
