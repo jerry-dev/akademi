@@ -3,12 +3,18 @@
     height: 100%;
     padding-bottom: 2.5rem;
     padding-top: 3.125rem;
-    max-width: 24.6875rem;
-    width: 20.5729%;
+    width: 100%;
+    max-width: 395px;
 }
 
 .rightMenu .rightMenuInnerContainer {
     margin-left: auto;
     margin-right: auto;
     width: 78.987%;
+}
+
+@media screen and (max-width: 1305px) {
+    .rightMenu {
+        display: none;
+    }
 }

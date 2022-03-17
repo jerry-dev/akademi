@@ -17,7 +17,7 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin-right: 6.8125rem;
+    margin-right: 10.728%;
     max-width: 15.25rem;
     width: 100%;
 }
@@ -34,6 +34,10 @@
     color: var(--color-4);
     font-size: var(--font-size-1);
     font-weight: 600;
+}
+
+.article .avatarContainer > figcaption > p {
+    color: var(--color-1);
 }
 
 .article > div > div {
@@ -59,9 +63,6 @@
     margin-right: 15.082956%;
 }
 
-.article .debt {
-}
-
 .article > div > div > button {
     background: none;
     border: none;
@@ -83,4 +84,27 @@
     height: 1.5rem;
     margin-left: 4.826546%;
     width: 1.5rem;
+}
+
+@media screen and (max-width: 1515px) {
+    .article > div > div {
+        overflow-x: scroll;
+    }
+
+    .article .studentId {
+        margin-right: 93px;
+        white-space: nowrap;
+    }
+
+    .article article {
+        margin-right: 100px;
+    }
+
+    .article > div > div span:nth-child(3) {
+        margin-right: 90px;
+    }
+
+    .article .printButton {
+        margin-right: 2rem;
+    }
 }
