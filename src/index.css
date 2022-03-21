@@ -45,11 +45,20 @@ html {
 
 body {
     min-height: 100%;
+    width: 100%;
+}
+
+.lock {
+    overflow: hidden;
 }
 
 #root {
     display: flex;
     max-width: 120rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    OUTLINE: 1PX SOLID RED;
 }
 
 main {

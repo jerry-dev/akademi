@@ -12,6 +12,10 @@ import getUnpaidStudentData from './getUnpaidStudentData.js';
 import getRecentStudents from './getRecentStudents.js';
 import getCurrentFoodsItems from './getCurrentFoodsItems.js';
 import setFakeTimeStamps from './setFakeTimeStamps';
+import menuIcon from '../../assets/icons/shared/menu.svg';
+import enableBodyScroll from '../../utils/enableBodyScroll.js';
+import closeOnEscKeyDown from '../../utils/closeOnEscKeyDown.js';
+import mobileRightMenuManager from '../../utils/mobileRightMenuManager.js';
 
 const HomeView = ({ overviewData, students, studentMessages, menuItems, schoolEvents }) => {
     const unpaidData = getUnpaidStudentData(students);
@@ -21,10 +25,11 @@ const HomeView = ({ overviewData, students, studentMessages, menuItems, schoolEv
 
     return (
         <React.Fragment>
-            <main className={styles.homeViewMain}>
+            <main className={styles.homeViewMain} onKeyDown={closeOnEscKeyDown} tabIndex="0">
                 <div className={styles.homeViewMainInnerContainer}>
                     <header>
                         <SectionTitle title="Dashboard"/>
+                        <img src={menuIcon} alt="Right menu" onClick={mobileRightMenuManager}/>
                     </header>                
                     <Overview metricsData={overviewData}/>
                     <SchoolPerformance/>
@@ -34,9 +39,18 @@ const HomeView = ({ overviewData, students, studentMessages, menuItems, schoolEv
                 </div>
             </main>
             <RightMenu
+                identifier={"defaultrightmenu"}
                 studentMessages={studentMessages}
                 recentStudents={recentStudents}
                 currentFoodsItems={currentFoodsItems}/>
+
+            <div className={styles.mobileRightMenuContainer} onClick={enableBodyScroll}>
+                <RightMenu
+                    identifier={"mobileRightMenu"}
+                    studentMessages={studentMessages}
+                    recentStudents={recentStudents}
+                    currentFoodsItems={currentFoodsItems}/>
+            </div>
         </React.Fragment>
     );
 }

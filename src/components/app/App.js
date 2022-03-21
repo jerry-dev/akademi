@@ -15,17 +15,17 @@ const App = () => {
     return (
         <React.Fragment>
             <Sidebar/>
-            <Routes>
-                <Route exact path="/" element={<HomeView/>}></Route>
-                <Route exact path="/students" element={<StudentsView/>}></Route>
-                <Route exact path="/teachers" element={<TeachersView/>}></Route>
-                <Route exact path="/event" element={<EventView/>}></Route>
-                <Route exact path="/finance" element={<FinanceView/>}></Route>
-                <Route exact path="/food" element={<FoodView/>}></Route>
-                <Route exact path="/user" element={<UserView/>}></Route>
-                <Route exact path="/chat" element={<ChatView/>}></Route>
-                <Route exact path="/activity" element={<ActivityView/>}></Route>
-            </Routes>
+                <Routes>
+                    <Route exact path="/" element={<HomeView/>}></Route>
+                    <Route exact path="/students" element={<StudentsView/>}></Route>
+                    <Route exact path="/teachers" element={<TeachersView/>}></Route>
+                    <Route exact path="/event" element={<EventView/>}></Route>
+                    <Route exact path="/finance" element={<FinanceView/>}></Route>
+                    <Route exact path="/food" element={<FoodView/>}></Route>
+                    <Route exact path="/user" element={<UserView/>}></Route>
+                    <Route exact path="/chat" element={<ChatView/>}></Route>
+                    <Route exact path="/activity" element={<ActivityView/>}></Route>
+                </Routes>
         </React.Fragment>
     )
 }

@@ -1,10 +1,9 @@
 .rightMenu {
     background-color: var(--color-8);
-    height: 100%;
     padding-bottom: 2.5rem;
     padding-top: 3.125rem;
     width: 100%;
-    max-width: 395px;
+    max-width: 24.6875rem;
 }
 
 .rightMenu .rightMenuInnerContainer {
@@ -13,8 +12,40 @@
     width: 78.987%;
 }
 
-@media screen and (max-width: 1305px) {
-    .rightMenu {
+.rightMenu[data-identifier="mobilerightmenu"] {
+    position: absolute;
+    top: 0;
+    right: -21.5625rem;
+    transition-property: transform;
+	transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.rightMenu[data-identifier="mobilerightmenu"][data-isoffcanvas=true] {
+    transform: translateX(0);
+    visibility: hidden;
+}
+
+.rightMenu[data-identifier="mobilerightmenu"][data-isoffcanvas=false]  {
+    height: 100vh;
+    transform: translateX(-21.5625rem);
+    overflow-y: scroll;
+    visibility: visible;
+    z-index: 999;
+}
+
+.mobileRightMenuBackdrop[data-isactive=true] {
+    background-color: var(--color-1);
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0.5;
+    width: 100vw;
+    z-index: 888;
+}
+
+@media screen and (max-width: 1240px) {
+    .rightMenu[data-identifier="defaultrightmenu"] {
         display: none;
     }
 }

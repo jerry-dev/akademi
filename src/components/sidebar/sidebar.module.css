@@ -1,12 +1,17 @@
 .aside {
     background-color: var(--color-1);
-    width: 17.96875%;
+    width: 21.5625rem;
     padding-top: 3.125rem;
 }
 
 @media screen and (max-width: 1730px) {
     .aside {
-        min-width: 120px;
-        max-width: 120px;
+        width: 7.5rem;
+    }
+}
+
+@media screen and (max-width: 845px) {
+    .aside {
+        width: 15%;
     }
 }

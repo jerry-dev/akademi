@@ -65,7 +65,6 @@ const UnpaidStudent = (props) => {
             details.thirdCircle = thirdCircleValue+1;
             details.secondCircle = details.thirdCircle-1;
             details.firstCircle = details.secondCircle-1;
-            console.log('DETAILS:', details)
             updateCircleNavButtons(details);
         }
     };
@@ -82,6 +81,7 @@ const UnpaidStudent = (props) => {
         theButtonsCollection[0].querySelector('output').innerText = detailsObject.firstCircle;
         theButtonsCollection[1].querySelector('output').innerText = detailsObject.secondCircle;
         theButtonsCollection[2].querySelector('output').innerText = detailsObject.thirdCircle;
+        
         (detailsObject.action === 'increment')
             ? setBucketBeingShown(bucketBeingShown+1)
             : setBucketBeingShown(bucketBeingShown-1);
