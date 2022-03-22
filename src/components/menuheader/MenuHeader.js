@@ -15,7 +15,7 @@ const MenuHeader = (props) => {
                     <img src={Gear} alt="Settings icon"/>
                 </button>
             </div>
-            <LoggedInUser userName="Nabila A." role="Admin"/>
+            <LoggedInUser userName="Jerry D." role="Admin"/>
         </header>
     )
 }
