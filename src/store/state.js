@@ -1,4 +1,6 @@
 export default {
+    test: "",
+    isFetchingData: false,
 overview: [
     { "title": "students", "stat": "932" },
     { "title": "teachers", "stat": "754" },

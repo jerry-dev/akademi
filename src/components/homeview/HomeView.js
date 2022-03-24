@@ -7,7 +7,8 @@ import SchoolCalendar from '../schoolcalendar/SchoolCalendar.js';
 import SchoolFinance from '../schoolfinance/SchoolFinance.js';
 import UnpaidStudent from '../unpaidstudent/UnpaidStudent.js';
 import RightMenu from '../rightmenu/RightMenu.js';
-import { connect } from 'react-redux';
+import homeViewDataFetcher from './homeViewDataFetcher.js';
+import { connect, useSelector, useDispatch } from 'react-redux';
 import getUnpaidStudentData from './getUnpaidStudentData.js';
 import getRecentStudents from './getRecentStudents.js';
 import getCurrentFoodsItems from './getCurrentFoodsItems.js';
@@ -17,7 +18,19 @@ import enableBodyScroll from '../../utils/enableBodyScroll.js';
 import closeOnEscKeyDown from '../../utils/closeOnEscKeyDown.js';
 import mobileRightMenuManager from '../../utils/mobileRightMenuManager.js';
 
-const HomeView = ({ overviewData, students, studentMessages, menuItems, schoolEvents }) => {
+const HomeView = () => {
+    const dispatch = useDispatch();
+    const overviewData = useSelector((state) => state.overview)
+    const studentMessages = useSelector((state) => state.messages)
+
+    const students = useSelector((state) => state.students)
+    const menuItems = useSelector((state) => state.food)
+    const schoolEvents = useSelector((state) => state.events)
+    
+    React.useEffect(() => {
+        homeViewDataFetcher.fetchA(dispatch);
+    },[]);
+    
     const unpaidData = getUnpaidStudentData(students);
     const recentStudents = getRecentStudents(students);
     setFakeTimeStamps(studentMessages);
@@ -55,14 +68,4 @@ const HomeView = ({ overviewData, students, studentMessages, menuItems, schoolEv
     );
 }
 
-const mapStateToProps = (state) => {
-    return {
-        overviewData: state.overview,
-        studentMessages: state.messages,
-        students: state.students,
-        menuItems: state.food,
-        schoolEvents: state.events
-    };
-};
-
-export default connect(mapStateToProps)(HomeView);
+export default connect()(HomeView);

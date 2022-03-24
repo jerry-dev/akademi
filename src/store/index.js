@@ -4,9 +4,10 @@ import stateObj from './state.js';
 
 const reducer = (state = stateObj, action) => {
     switch (action.type) {
-        case 'getHomeData':
-            actions['getHomeData']();
-            break;
+        case 'LOAD_POSTS':
+            return actions['loadPosts'](state, action.payload);
+        case 'IS_FETCHING_DATA':
+            return actions['isFetchingData'](state, action.payload);
     }
     
     return state;

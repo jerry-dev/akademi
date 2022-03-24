@@ -69,7 +69,7 @@ const LineChart = (props) => {
     const thisWeekPerformance = [20, 40, 50, 25, 10, 25, 50, 30, 10, 50, 90, 40];
     const lastWeekPerformance = [0, 50, 80, 45, 0, 25, 50, 40, 10, 50, 75, 60];
 
-    React.useEffect(() => {        
+    React.useEffect(() => {
         const dataObj = {
             labels: months,
             datasets: [
