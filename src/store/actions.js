@@ -1,7 +1,15 @@
 export default {
     loadHomeViewData(state, payload) {
         console.info('Loading the homeView data');
-        const newState = { ...state, test: payload };
+        const newState = {
+            ...state,
+            overview: payload.overview,
+            food: payload.food,
+            events: payload.events,
+            messages: payload.messages,
+            recentStudents: payload.recentStudents,
+            unpaidTuition: payload.unpaidTuition
+        };
         return newState;
     },
     isFetchingData(state, payload) {

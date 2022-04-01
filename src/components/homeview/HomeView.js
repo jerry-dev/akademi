@@ -9,10 +9,6 @@ import UnpaidStudent from '../unpaidstudent/UnpaidStudent.js';
 import RightMenu from '../rightmenu/RightMenu.js';
 import homeViewDataFetcher from './homeViewDataFetcher.js';
 import { connect, useSelector, useDispatch } from 'react-redux';
-import getUnpaidStudentData from './getUnpaidStudentData.js';
-import getRecentStudents from './getRecentStudents.js';
-import getCurrentFoodsItems from './getCurrentFoodsItems.js';
-import setFakeTimeStamps from './setFakeTimeStamps';
 import menuIcon from '../../assets/icons/shared/menu.svg';
 import enableBodyScroll from '../../utils/enableBodyScroll.js';
 import closeOnEscKeyDown from '../../utils/closeOnEscKeyDown.js';
@@ -20,22 +16,17 @@ import mobileRightMenuManager from '../../utils/mobileRightMenuManager.js';
 
 const HomeView = () => {
     const dispatch = useDispatch();
-    const overviewData = useSelector((state) => state.overview)
-    const studentMessages = useSelector((state) => state.messages)
-
-    const students = useSelector((state) => state.students)
-    const menuItems = useSelector((state) => state.food)
-    const schoolEvents = useSelector((state) => state.events)
+    const overviewData = useSelector((state) => state.overview);
+    const studentMessages = useSelector((state) => state.messages);
+    const recentStudents = useSelector((state) => state.recentStudents);
+    const unpaidData = useSelector((state) => state.unpaidTuition);
+    const currentFoodsItems = useSelector((state) => state.food);
+    const schoolEvents = useSelector((state) => state.events);
     
     React.useEffect(() => {
         homeViewDataFetcher(dispatch);
     },[]);
     
-    const unpaidData = getUnpaidStudentData(students);
-    const recentStudents = getRecentStudents(students);
-    setFakeTimeStamps(studentMessages);
-    const currentFoodsItems = getCurrentFoodsItems(menuItems);
-
     return (
         <React.Fragment>
             <main className={styles.homeViewMain} onKeyDown={closeOnEscKeyDown} tabIndex="0">
