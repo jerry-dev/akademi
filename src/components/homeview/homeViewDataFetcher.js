@@ -14,7 +14,7 @@ const homeViewDataFetcher = (dispatch) => {
     if (cached !== null && whenCached !== null) {
         let age = (Date.now() - whenCached) / 1000;
         if (age < expiry) {
-            return dispatch({type: 'LOAD_POSTS', payload: JSON.parse(cached)});
+            return dispatch({type: 'LOAD_HOMEVIEW_DATA', payload: JSON.parse(cached)});
         } else {
             sessionStorage.removeItem(cacheKey);
             sessionStorage.removeItem(`${cacheKey}:timestamp`);
@@ -35,7 +35,7 @@ const homeViewDataFetcher = (dispatch) => {
                     sessionStorage.setItem(cacheKey, content);
                     sessionStorage.setItem(`${cacheKey}:timestamp`, Date.now());
                     dispatch({type: 'IS_FETCHING_DATA', payload: false});
-                    return dispatch({type: 'LOAD_POSTS', payload: JSON.parse(content)});
+                    return dispatch({type: 'LOAD_HOMEVIEW_DATA', payload: JSON.parse(content)});
                 });
             }
         }

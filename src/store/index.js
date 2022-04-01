@@ -5,7 +5,7 @@ import initialState from './state.js';
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'LOAD_HOMEVIEW_DATA':
-            return actions['loadPosts'](state, action.payload);
+            return actions['loadHomeViewData'](state, action.payload);
         case 'IS_FETCHING_DATA':
             return actions['isFetchingData'](state, action.payload);
     }
