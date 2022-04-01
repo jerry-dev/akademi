@@ -1,4 +1,4 @@
-const previousArrow = (event, setBucketBeingShown, updateCircleNavButtons) => {
+const previousArrow = (event, setBucketBeingShown, updateCircleNavButtons, bucketsContainer, bucketBeingShown) => {
     const firstCircleValue = Number(event.currentTarget.getElementsByTagName('div')[0].getElementsByTagName('button')[0].querySelector('output').innerText);
     if (firstCircleValue === 1) {
         return;

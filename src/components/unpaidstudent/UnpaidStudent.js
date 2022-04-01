@@ -17,8 +17,8 @@ const UnpaidStudent = (props) => {
             'firstCircleNav': () => circleNavs(event, bucketBeingShown, setBucketBeingShown),
             'secondCircleNav': () => circleNavs(event, bucketBeingShown, setBucketBeingShown),
             'thirdCircleNav': () => circleNavs(event, bucketBeingShown, setBucketBeingShown),
-            'previousArrow': () => previousArrow(event, setBucketBeingShown, updateCircleNavButtons),
-            'nextArrow': () => nextArrow(event, setBucketBeingShown, updateCircleNavButtons),
+            'previousArrow': () => previousArrow(event, setBucketBeingShown, updateCircleNavButtons, bucketsContainer, bucketBeingShown),
+            'nextArrow': () => nextArrow(event, setBucketBeingShown, updateCircleNavButtons, bucketsContainer, bucketBeingShown),
         }[event.target.id]();
     };
 
@@ -40,7 +40,7 @@ const UnpaidStudent = (props) => {
                 </header>
                 <ul>{
                     bucketsContainer[bucketBeingShown].map((doc) => {
-                        return <li><UnpaidStudentDetail
+                        return <li key={Math.floor(Math.random() * 99999)}><UnpaidStudentDetail
                             studentPhoto={doc.studentPhoto}
                             studentFullName={doc.studentFullName}
                             studentId={doc.studentId}

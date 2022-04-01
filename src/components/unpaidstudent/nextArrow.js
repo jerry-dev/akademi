@@ -1,4 +1,4 @@
-const nextArrow = (event, setBucketBeingShown, updateCircleNavButtons) => {
+const nextArrow = (event, setBucketBeingShown, updateCircleNavButtons, bucketsContainer, bucketBeingShown) => {
     const thirdCircleValue = Number(event.currentTarget.getElementsByTagName('div')[0].getElementsByTagName('button')[2].querySelector('output').innerText);
     if (thirdCircleValue >= Object.keys(bucketsContainer).length) {
         return;
