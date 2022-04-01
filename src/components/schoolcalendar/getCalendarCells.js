@@ -44,6 +44,7 @@ const getCalendarCells = (month, events) => {
 
     const returnCalendarCell = (details) => {
         return <li
+            key={Math.floor(Math.random() * 99999)}
             {...(details.eventType) ? {'data-eventtype': details.eventType} : null}
             {...{'data-isoutermonth': details.isOuterMonth}}
             {...{'data-isthefirstisonasunday': details.isTheFirstIsOnASunday}}
