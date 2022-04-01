@@ -2,12 +2,13 @@ import React from 'react';
 import RecentStudentListElement from '../recentstudentlistelement/RecentStudentListElement.js';
 
 const getStudents = (bucketsToDisplay) => {
-    return bucketsToDisplay.map((student) => {
-        return <li>
+    return bucketsToDisplay.map((studentInstance) => {
+        return <li key={Math.floor(Math.random() * 99999)}>
             <RecentStudentListElement
-                studentName={student.studentName}
-                studentClass={student.studentClass}
-                studentPhoto={student.studentPhoto}/>
+                studentId={studentInstance.studentId}
+                studentName={studentInstance.studentName}
+                studentClass={studentInstance.class}
+                studentPhoto={studentInstance.profilePhoto}/>
         </li>
     });
 }

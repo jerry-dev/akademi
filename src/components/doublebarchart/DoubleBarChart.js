@@ -50,7 +50,7 @@ import {
   );
 import styles from './doublebarchart.module.css';
 
-const DoubleBarChart = (props) => {
+const DoubleBarChart = () => {
     const days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
     const thisWeekIncome = [75, 55, 30, 39, 20, 81, 52];
     const lastWeekIncome = [95, 41, 39, 45, 30, 64, 75];
@@ -147,7 +147,7 @@ const DoubleBarChart = (props) => {
         };
         
         new Chart("theDoubleBarChart", chartObj);
-    });
+    }, []);
     
 
     return (

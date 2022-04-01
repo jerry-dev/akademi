@@ -11,10 +11,6 @@ import updateCircleNavButtons from './updateCircleNavButtons.js';
 
 const UnpaidStudent = (props) => {
     const [ bucketBeingShown, setBucketBeingShown ] = React.useState(1);
-    const maxDocPerPage = 5;
-    let firstDoc = null;
-    let bucketsContainer = null;
-    let lastDoc = null;
 
     const paginatorButtonsHandler = (event) => {
         return {
@@ -26,22 +22,21 @@ const UnpaidStudent = (props) => {
         }[event.target.id]();
     };
 
-    React.useEffect(() => {
-        bucketsContainer = dataBucketCreator(props.unpaidStudents, maxDocPerPage);
-        firstDoc = 1;
+    const maxDocPerPage = 5;
+    let bucketsContainer = dataBucketCreator(props.unpaidStudents, maxDocPerPage);
+    let firstDoc = 1;
 
-        if (bucketBeingShown !== 1) {
-            firstDoc = ( (bucketBeingShown * maxDocPerPage) - (maxDocPerPage - 1));
-        }
+    if (bucketBeingShown !== 1) {
+        firstDoc = ( (bucketBeingShown * maxDocPerPage) - (maxDocPerPage - 1));
+    }
 
-        lastDoc = ( Object(bucketsContainer[bucketBeingShown]).length+firstDoc )-1;
-    });
+    const lastDoc = ( Object(bucketsContainer[bucketBeingShown]).length+firstDoc )-1;
 
     return (
         <section className={styles.unpaidStudent}>
             <div>
                 <header>
-                    <SectionTitle title="Unpaid Student Intuition"/>                   
+                    <SectionTitle title="Unpaid Student Intuition"/>
                 </header>
                 <ul>{
                     bucketsContainer[bucketBeingShown].map((doc) => {

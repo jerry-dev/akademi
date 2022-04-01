@@ -64,12 +64,11 @@ const getLinearGradientFill = (chart, color1, color2) => {
     return linearGradientPattern;
 }
 
-const LineChart = (props) => {
+const LineChart = () => {
     const months = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"];
     const thisWeekPerformance = [20, 40, 50, 25, 10, 25, 50, 30, 10, 50, 90, 40];
     const lastWeekPerformance = [0, 50, 80, 45, 0, 25, 50, 40, 10, 50, 75, 60];
 
-    React.useEffect(() => {
         const dataObj = {
             labels: months,
             datasets: [
@@ -162,12 +161,15 @@ const LineChart = (props) => {
                 },
             }
         };
+
+        React.useEffect(() => {
+            const chart = new Chart('theLineChart', chartObj);
         
-        const chart = new Chart('theLineChart', chartObj);
-        chart.data.datasets[1].backgroundColor = getLinearGradientFill(chart, 'rgba(251, 125, 91, 0.3)', 'rgba(251, 125, 91, 0)');
-        chart.data.datasets[2].backgroundColor = getLinearGradientFill(chart, 'rgba(252, 196, 62, 0.3)', 'rgba(252, 196, 62, 0)');
-        chart.update();
-    });
+            chart.data.datasets[1].backgroundColor = getLinearGradientFill(chart, 'rgba(251, 125, 91, 0.3)', 'rgba(251, 125, 91, 0)');
+            chart.data.datasets[2].backgroundColor = getLinearGradientFill(chart, 'rgba(252, 196, 62, 0.3)', 'rgba(252, 196, 62, 0)');
+            chart.update();
+        }, [])
+        
 
     return (
         <figure className={styles.figure}>

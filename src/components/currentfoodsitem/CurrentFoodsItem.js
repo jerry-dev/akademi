@@ -2,14 +2,8 @@ import React from 'react';
 import styles from './currentfoodsitem.module.css';
 import burger from '../../assets/images/menuItems/burger.jpg';
 import smoothie from '../../assets/images/menuItems/smoothie.jpg';
-import beefsteak from '../../assets/images/menuItems/beefsteak.jpg';
-import pancakes from '../../assets/images/menuItems/pancakes.jpg';
-import pizza from '../../assets/images/menuItems/pizza.jpg';
-import shrimpsalad from '../../assets/images/menuItems/shrimpsalad.jpg';
-import raman from '../../assets/images/menuItems/raman.jpg';
-
-
 const CurrentFoodsItem = (props) => {
+    console.log('props:', props);
     let image = {};
 
     switch (props.itemId) {
@@ -26,7 +20,7 @@ const CurrentFoodsItem = (props) => {
     return (
         <article className={styles.currentFoodItem}>
             <figure>
-                <img src={image} alt={altValue}/>
+                <img src={props.imageSource} alt={altValue}/>
                 <figcaption>
                     <h5>{props.menuItemName}</h5>
                     <p>{props.menuItemPreviewDetail}</p>

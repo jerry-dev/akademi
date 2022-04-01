@@ -7,6 +7,7 @@ import events from '../../assets/icons/shared/Calendar.svg';
 import foods from '../../assets/icons/shared/Food.svg';
 
 const Overview = (props) => {
+
     const iconManager = (name) => {
         return {
             'students': students,
