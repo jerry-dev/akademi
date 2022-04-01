@@ -19,7 +19,11 @@ const getOptions = () => {
     const options = [];
 
     for (let i = 0; i < 12; i++) {
-        options[options.length] = <option value={i}>{monthWithYear[i]}</option>
+        options[options.length] = <option
+            value={i}
+            key={Math.floor(Math.random() * 99999)}>
+                {monthWithYear[i]}
+        </option>
     }
 
     return options;
