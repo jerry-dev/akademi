@@ -3,7 +3,6 @@ import CurrentFoodsItem from '../currentfoodsitem/CurrentFoodsItem.js';
 
 const getMenuItems = (bucketsToDisplay) => {
     return bucketsToDisplay.map((foodInstance) => {
-        console.log('foodInstance:', foodInstance);
         return <li key={Math.floor(Math.random() * 99999)}>
             <CurrentFoodsItem
                 itemId={foodInstance.itemId}
