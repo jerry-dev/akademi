@@ -1,6 +1,6 @@
 export default {
-    loadPosts(state, payload) {
-        console.info('Loading the posts')
+    loadHomeViewData(state, payload) {
+        console.info('Loading the homeView data');
         const newState = { ...state, test: payload };
         return newState;
     },
