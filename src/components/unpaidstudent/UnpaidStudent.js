@@ -36,7 +36,7 @@ const UnpaidStudent = (props) => {
         <section className={styles.unpaidStudent}>
             <div>
                 <header>
-                    <SectionTitle title="Unpaid Student Intuition"/>
+                    <SectionTitle title="Unpaid Student Tuition"/>
                 </header>
                 <ul>{
                     bucketsContainer[bucketBeingShown].map((doc) => {
