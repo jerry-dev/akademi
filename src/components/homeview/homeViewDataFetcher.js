@@ -1,5 +1,3 @@
-import config from 'config';
-
 const homeViewDataFetcher = (dispatch) => {
     const expiry = 10*60; //Ten minutes
 
