@@ -22,6 +22,7 @@ const Overview = (props) => {
             <div>{
                     props.metricsData.map((metric) => {
                         return <OverviewMetric
+                        key={Math.floor(Math.random() * 99999)}
                         icon={iconManager(metric.title)}
                         statTitle={metric.title.replace(metric.title[0], metric.title[0].toUpperCase())}
                         stat={metric.stat.replace(/\,.*/, "k")}
