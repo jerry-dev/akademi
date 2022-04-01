@@ -1,9 +1,10 @@
-const homeViewDataFetcher = {};
+import config from 'config';
 
-homeViewDataFetcher.fetchA = (dispatch) => {
-    const expiry = 1*60; //One minutes
+const homeViewDataFetcher = (dispatch) => {
+    const expiry = 10*60; //Ten minutes
 
-    const url = 'https://jsonplaceholder.typicode.com/todos';
+    const url = 'https://akademi-server.herokuapp.com/';
+    
     let cacheKey = url;
     let cached = sessionStorage.getItem(cacheKey);
     let whenCached = sessionStorage.getItem(`${cacheKey}:timestamp`);
@@ -22,7 +23,11 @@ homeViewDataFetcher.fetchA = (dispatch) => {
         }
     }
 
-    return fetch(url).then((response) => {
+    const fetchOptions = {
+        method: 'GET'
+    }
+
+    return fetch(url, fetchOptions).then((response) => {
         dispatch({type: 'IS_FETCHING_DATA', payload: true});
         if (response.status === 200) {
             let contentType = response.headers.get('Content-Type');

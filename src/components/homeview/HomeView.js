@@ -28,7 +28,7 @@ const HomeView = () => {
     const schoolEvents = useSelector((state) => state.events)
     
     React.useEffect(() => {
-        homeViewDataFetcher.fetchA(dispatch);
+        homeViewDataFetcher(dispatch);
     },[]);
     
     const unpaidData = getUnpaidStudentData(students);
