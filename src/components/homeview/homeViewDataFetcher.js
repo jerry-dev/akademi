@@ -1,4 +1,4 @@
-const homeViewDataFetcher = (dispatch) => {
+const homeViewDataFetcher = (dispatch, isViewDataReady) => {
     const expiry = 10*60; //Ten minutes
 
     const url = 'https://akademi-server.herokuapp.com/';
@@ -7,14 +7,15 @@ const homeViewDataFetcher = (dispatch) => {
     let cached = sessionStorage.getItem(cacheKey);
     let whenCached = sessionStorage.getItem(`${cacheKey}:timestamp`);
 
-    (!cached) 
-        ? console.info(`::The data is not from the local cache::`)
-        : console.info(`::The data came from the local cache::`);
-
     if (cached !== null && whenCached !== null) {
         let age = (Date.now() - whenCached) / 1000;
         if (age < expiry) {
-            return dispatch({type: 'LOAD_HOMEVIEW_DATA', payload: JSON.parse(cached)});
+            if (!isViewDataReady) {
+                dispatch({type: 'LOAD_HOMEVIEW_DATA', payload: JSON.parse(cached)});
+                return dispatch({type: 'IS_HOME_DATA_READY', payload: true});
+            } else {
+                return dispatch({type: 'IS_HOME_DATA_READY', payload: true});
+            }
         } else {
             sessionStorage.removeItem(cacheKey);
             sessionStorage.removeItem(`${cacheKey}:timestamp`);
@@ -35,7 +36,8 @@ const homeViewDataFetcher = (dispatch) => {
                     sessionStorage.setItem(cacheKey, content);
                     sessionStorage.setItem(`${cacheKey}:timestamp`, Date.now());
                     dispatch({type: 'IS_FETCHING_DATA', payload: false});
-                    return dispatch({type: 'LOAD_HOMEVIEW_DATA', payload: JSON.parse(content)});
+                    dispatch({type: 'LOAD_HOMEVIEW_DATA', payload: JSON.parse(content)});
+                    return dispatch({type: 'IS_HOME_DATA_READY', payload: true});
                 });
             }
         }

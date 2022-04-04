@@ -8,6 +8,8 @@ const reducer = (state = initialState, action) => {
             return actions['loadHomeViewData'](state, action.payload);
         case 'IS_FETCHING_DATA':
             return actions['isFetchingData'](state, action.payload);
+        case 'IS_HOME_DATA_READY':
+            return actions['isHomeDataReady'](state, action.payload);
     }
     
     return state;

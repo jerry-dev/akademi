@@ -21,7 +21,7 @@ const RightMenu = (props) => {
             onKeyDown={closeOnEscKeyDown} tabIndex="0"></span>
             <aside {...identifier} className={styles.rightMenu}>
                 <div className={styles.rightMenuInnerContainer}>
-                    <MenuHeader/>
+                    <MenuHeader location={props.identifier}/>
                     <RecentStudents recentStudents={props.recentStudents}/>
                     <Messages studentMessages={props.studentMessages}/>
                     <CurrentFoodsMenu currentFoodsItems={props.currentFoodsItems}/>

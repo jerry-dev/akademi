@@ -9,27 +9,28 @@ import menuIcon from '../../assets/icons/shared/menu.svg';
 import enableBodyScroll from '../../utils/enableBodyScroll.js';
 import closeOnEscKeyDown from '../../utils/closeOnEscKeyDown.js';
 import mobileRightMenuManager from '../../utils/mobileRightMenuManager.js';
-
-const Overview = React.lazy(() => import('../overview/Overview.js'));
-const SchoolCalendar = React.lazy(() => import('../schoolcalendar/SchoolCalendar.js'));
-const UnpaidStudent = React.lazy(() => import('../unpaidstudent/UnpaidStudent.js'));
-const RightMenu = React.lazy(() => import('../rightmenu/RightMenu.js'));
+import Overview from '../overview/Overview.js';
+import SchoolCalendar from '../schoolcalendar/SchoolCalendar.js';
+import UnpaidStudent from '../unpaidstudent/UnpaidStudent.js';
+import RightMenu from '../rightmenu/RightMenu.js';
+import LoadingScreen from '../loadingscreen/LoadingScreen.js';
 
 const HomeView = () => {
     const dispatch = useDispatch();
     const overviewData = useSelector((state) => state.overview);
     const studentMessages = useSelector((state) => state.messages);
     const recentStudents = useSelector((state) => state.recentStudents);
-    const unpaidData = useSelector((state) => state.unpaidTuition);
+    const unpaidData = useSelector((state) => (state.unpaidTuition) ? state.unpaidTuition : []);
     const currentFoodsItems = useSelector((state) => state.food);
     const schoolEvents = useSelector((state) => state.events);
+    const isHomeDataReady = useSelector((state) => state.isHomeDataReady);
     
     React.useEffect(() => {
-        homeViewDataFetcher(dispatch);
+        homeViewDataFetcher(dispatch, isHomeDataReady);
     },[]);
-    
-    return (
-        <React.Suspense fallback={"Loading..."}>
+
+    const element = (isHomeDataReady)
+        ? (
             <React.Fragment>
                 <main className={styles.homeViewMain} onKeyDown={closeOnEscKeyDown} tabIndex="0">
                     <div className={styles.homeViewMainInnerContainer}>
@@ -49,7 +50,7 @@ const HomeView = () => {
                     studentMessages={studentMessages}
                     recentStudents={recentStudents}
                     currentFoodsItems={currentFoodsItems}/>
-
+                    
                 <div className={styles.mobileRightMenuContainer} onClick={enableBodyScroll}>
                     <RightMenu
                         identifier={"mobileRightMenu"}
@@ -57,9 +58,10 @@ const HomeView = () => {
                         recentStudents={recentStudents}
                         currentFoodsItems={currentFoodsItems}/>
                 </div>
-            </React.Fragment>
-        </React.Suspense>
-    );
+            </React.Fragment>)
+        : <LoadingScreen/>;
+
+        return element;
 }
 
 export default connect()(HomeView);

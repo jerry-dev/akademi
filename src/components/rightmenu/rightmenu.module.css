@@ -4,6 +4,8 @@
     padding-top: 3.125rem;
     width: 100%;
     max-width: 24.6875rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .rightMenu .rightMenuInnerContainer {

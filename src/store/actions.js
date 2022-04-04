@@ -18,4 +18,12 @@ export default {
             : console.info('The application is no longer fetching data');
 		return { ...state, isFetchingData: payload };
     },
+    isHomeDataReady(state, payload) {
+        console.info('Home data is ready');
+        const newState = {
+            ...state,
+            isHomeDataReady: payload
+        };
+        return newState;
+    }
 }

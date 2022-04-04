@@ -9,7 +9,7 @@ const SchoolCalendar = (props) => {
     const [ selectedMonth, setSelectedMonth ] = React.useState(new Date().getMonth());
     const selectedMonthsEvents = props.schoolEvents[0][selectedMonth];
 
-    const selectArrowStyles = {backgroundImage: `url(${selectArrow})`, backgroundSize: "1.5rem 1.5rem", backgroundRepeat: "no-repeat", backgroundPosition: "right"}
+    const selectArrowStyles = {backgroundImage: `url(${selectArrow})`, backgroundSize: "1.5rem 1.5rem", backgroundRepeat: "no-repeat", backgroundPosition: "right"};
     return (
         <section className={styles.schoolCalendar}>
             <div>
