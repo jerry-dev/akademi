@@ -51,7 +51,7 @@ const HomeView = () => {
                     recentStudents={recentStudents}
                     currentFoodsItems={currentFoodsItems}/>
                     
-                <div className={styles.mobileRightMenuContainer} onClick={enableBodyScroll}>
+                <div id="mobileRightMenuContainer" className={styles.mobileRightMenuContainer} onClick={enableBodyScroll}>
                     <RightMenu
                         identifier={"mobileRightMenu"}
                         studentMessages={studentMessages}
