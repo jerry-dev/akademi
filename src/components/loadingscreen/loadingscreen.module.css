@@ -1,5 +1,10 @@
-.loadingScreen {
-    margin-left: auto;
-    margin-right: auto;
+.picture {
+    background-color: var(--color-7);
+    display: flex;
+    justify-content: center;
     width: 100%;
+}
+
+.loadingScreen {
+    width: 60%;
 }
